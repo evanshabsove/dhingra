@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about', as: 'about'
 
-  get '/contact' to: 'home#contact', as: 'contact'
+  get '/contact', to: 'home#contact', as: 'contact'
 
-  get '/blog' to: 'home#blog', as: 'blog'
+  get '/blog', to: 'home#blog', as: 'blog'
 end
