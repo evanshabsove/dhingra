@@ -1,0 +1,2 @@
+class GallariesController < ApplicationController
+end
