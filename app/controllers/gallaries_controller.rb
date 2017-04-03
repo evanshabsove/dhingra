@@ -6,4 +6,24 @@ class GallariesController < ApplicationController
   def show
     @gallary = Gallary.find(params[:id])
   end
+
+  def new
+    @gallery = Gallary.new
+  end
+
+  def create
+    @gallery = Gallary.new(gallery_params)
+
+    if @gallery.save
+      redirect_to gallaries_url
+    else
+      render :new
+    end
+  end
+
+
+  private
+  def gallery_params
+    params.require(:gallary).permit(:title, :description)
+  end
 end
