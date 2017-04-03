@@ -1,1 +1,4 @@
 <h1>Galliers show</h1>
+<% @gallary.paintings.each do |painting| %>
+  <h4><%= painting.title %></h4>
+<% end %>

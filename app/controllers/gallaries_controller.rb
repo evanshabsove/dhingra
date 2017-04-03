@@ -4,5 +4,6 @@ class GallariesController < ApplicationController
   end
 
   def show
+    @gallary = Gallary.find(params[:id])
   end
 end
