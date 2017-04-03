@@ -9,24 +9,18 @@ development:
   encoding: utf8
   database: dhingra_development
   pool: 5
-  username: dhingra
-  password: secret
 
 test: &TEST
   adapter: postgresql
   encoding: utf8
   database: dhingra_test
   pool: 5
-  username: dhingra
-  password: secret
 
 production:
   adapter: postgresql
   encoding: utf8
   database: dhingra_production
   pool: 5
-  username: dhingra
-  password: secret
 
 cucumber:
   <<: *TEST
