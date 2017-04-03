@@ -1,9 +1,8 @@
 class GallariesController < ApplicationController
   def index
-    #code
+    @gallaries = Gallary.all
   end
 
   def show
-    #code
   end
 end
