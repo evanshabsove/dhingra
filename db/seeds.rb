@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Painting.create(title: 'Paint1', description: 'first painting', image: '123.jpg', gallary_id: 1)
 Gallary.create(title: 'gallary1', description: 'first gallary')
+User.create(name: 'Evan', email: 'evan@co', password: '123')
