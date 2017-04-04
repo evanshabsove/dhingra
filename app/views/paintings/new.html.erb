@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-sm-12 text-center">
       <div class="form-group well">
-        <%= form_for @painting do |f| %>
+        <%= form_for([@gallary, @paintings]) do |f| %>
           <%= f.label :title %>
           <%= f.text_field :title, :class => "form-control" %>
 

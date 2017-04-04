@@ -8,17 +8,17 @@ class GallariesController < ApplicationController
   end
 
   def new
-    @gallery = Gallary.new
+    @gallary = Gallary.new
   end
 
   def edit
-    @gallery = Gallary.find(params[:id])
+    @gallary = Gallary.find(params[:id])
   end
 
   def create
-    @gallery = Gallary.new(gallery_params)
+    @gallary = Gallary.new(gallery_params)
 
-    if @gallery.save
+    if @gallary.save
       redirect_to gallaries_url
     else
       render :new
@@ -26,8 +26,8 @@ class GallariesController < ApplicationController
   end
 
   def update
-    @gallery = Gallary.find(params[:id])
-    if @gallery.update_attributes(gallery_params)
+    @gallary = Gallary.find(params[:id])
+    if @gallary.update_attributes(gallary_params)
       redirect_to gallaries_url
     else
       render :edit
@@ -35,14 +35,14 @@ class GallariesController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallary.find(params[:id])
-    if @gallery.destroy
+    @gallary = Gallary.find(params[:id])
+    if @gallary.destroy
       redirect_to gallaries_url
     end
   end
 
   private
-  def gallery_params
+  def gallary_params
     params.require(:gallary).permit(:title, :description)
   end
 end
