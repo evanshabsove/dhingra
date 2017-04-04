@@ -1,6 +1,6 @@
-<h1>Gallaries show page</h1>
+<h1><%= @gallary.title %></h1>
 <% @gallary.paintings.each do |painting| %>
   <h4><%= painting.title %></h4>
+<% end %>
 
   <h3><%= link_to "Add a painting", new_gallary_painting_path(@gallary) %></h3>
-<% end %>

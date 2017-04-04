@@ -16,7 +16,7 @@ class GallariesController < ApplicationController
   end
 
   def create
-    @gallary = Gallary.new(gallery_params)
+    @gallary = Gallary.new(gallary_params)
 
     if @gallary.save
       redirect_to gallaries_url
