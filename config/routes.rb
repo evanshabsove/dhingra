@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact', as: 'contact'
 
   get '/blog', to: 'home#blog', as: 'blog'
+
+  get '/admin', to: 'sessions#admin', as: 'admin_log_in'
 end
