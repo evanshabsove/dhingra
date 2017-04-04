@@ -8,3 +8,7 @@
 
   <%= f.submit "Submit", :class=>"btn btn-primary" %>
 <% end %>
+
+<%= form_for @gallery, method: 'delete', url: "/gallaries/#{@gallery.id}"  do |f| %>
+  <%= f.submit "Delete Gallery", :class=>"btn btn-danger" %>
+<% end %>
