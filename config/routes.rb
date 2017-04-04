@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :paintings
   end
 
+  resources :sessions, only: [:create, :destroy]
+
   root 'home#index'
 
   get '/about', to: 'home#about', as: 'about'

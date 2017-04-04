@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       end
     else
       flash.now[:alert] = "Invalid User Name or Password"
-      render "index"
+      render "admin"
     end
   end
 
