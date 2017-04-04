@@ -1,4 +1,5 @@
 class PaintingsController < ApplicationController
+  before_action :load_gallery
 
   def show
     @painting = Painting.find(params[:id])
@@ -42,6 +43,10 @@ class PaintingsController < ApplicationController
   private
   def painting_params
     params.require(:painting).permit(:title, :description, :image)
+  end
+
+  def load_gallery
+    @gallery = Gallary.find(params[:gallary_id])
   end
 
 end
