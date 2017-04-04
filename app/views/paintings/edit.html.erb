@@ -1,1 +1,21 @@
 <h1>Paintings edit page</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="form-group well">
+        <%= form_for [@gallery, @painting] do |f| %>
+          <%= f.label :title %>
+          <%= f.text_field :title, :class => "form-control" %>
+
+          <%= f.label :image %>
+          <%= f.file_field :image, :class => "form-control" %>
+
+          <%= f.label :description %>
+          <%= f.text_area :description, :class => "form-control" %><br>
+
+          <%= f.submit "Submit", :class=>"btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
