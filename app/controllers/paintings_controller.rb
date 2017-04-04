@@ -17,7 +17,7 @@ class PaintingsController < ApplicationController
     @painting = Painting.new(painting_params)
 
     if @painting.save
-      redirect_to gallaries_url
+      redirect_to galleries_url
     else
       render :new
     end
@@ -26,16 +26,16 @@ class PaintingsController < ApplicationController
   def update
     @painting = Painting.find(params[:id])
     if @painting.update_attributes(painting_params)
-      redirect_to gallaries_url
+      redirect_to galleries_url
     else
       render :edit
     end
   end
 
   def destroy
-    @gallery = Gallary.find(params[:id])
+    @gallery = Gallery.find(params[:id])
     if @gallery.destroy
-      redirect_to gallaries_url
+      redirect_to galleries_url
     end
   end
 
@@ -46,7 +46,7 @@ class PaintingsController < ApplicationController
   end
 
   def load_gallery
-    @gallery = Gallary.find(params[:gallary_id])
+    @gallery = Gallery.find(params[:gallery_id])
   end
 
 end

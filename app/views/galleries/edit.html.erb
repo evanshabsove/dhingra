@@ -1,0 +1,14 @@
+<h1>edit page</h1>
+<%= form_for @gallery do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :class => "form-control" %>
+
+  <%= f.label :description %>
+  <%= f.text_area :description, :class => "form-control" %><br>
+
+  <%= f.submit "Submit", :class=>"btn btn-primary" %>
+<% end %>
+
+<%= form_for @gallery, method: 'delete', url: "/gallaries/#{@gallery.id}"  do |f| %>
+  <%= f.submit "Delete Gallery", :class=>"btn btn-danger" %>
+<% end %>

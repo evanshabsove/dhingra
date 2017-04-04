@@ -1,50 +1,49 @@
 class GalleriesController < ApplicationController
 
-    def index
-      @gallaries = Gallary.all
-    end
+  def index
+    @galleries = Gallery.all
+  end
 
-    def show
-      @gallery = Gallary.find(params[:id])
-    end
+  def show
+    @gallery = Gallery.find(params[:id])
+  end
 
-    def new
-      @gallary = Gallary.new
-    end
+  def new
+    @gallery = Gallery.new
+  end
 
-    def edit
-      @gallary = Gallary.find(params[:id])
-    end
+  def edit
+    @gallery = Gallery.find(params[:id])
+  end
 
-    def create
-      @gallary = Gallary.new(gallary_params)
+  def create
+    @gallery = Gallery.new(gallery_params)
 
-      if @gallary.save
-        redirect_to gallaries_url
-      else
-        render :new
-      end
+    if @gallery.save
+      redirect_to galleries_url
+    else
+      render :new
     end
+  end
 
-    def update
-      @gallary = Gallary.find(params[:id])
-      if @gallary.update_attributes(gallary_params)
-        redirect_to gallaries_url
-      else
-        render :edit
-      end
+  def update
+    @gallery = Gallery.find(params[:id])
+    if @gallery.update_attributes(gallery_params)
+      redirect_to galleries_url
+    else
+      render :edit
     end
+  end
 
-    def destroy
-      @gallary = Gallary.find(params[:id])
-      if @gallary.destroy
-        redirect_to gallaries_url
-      end
+  def destroy
+    @gallery = Gallery.find(params[:id])
+    if @gallery.destroy
+      redirect_to galleries_url
     end
+  end
 
-    private
-    def gallary_params
-      params.require(:gallary).permit(:title, :description)
-    end
+  private
+  def gallery_params
+    params.require(:gallery).permit(:title, :description)
   end
 end
