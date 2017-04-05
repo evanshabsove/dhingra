@@ -16,5 +16,9 @@ Rails.application.routes.draw do
 
   get '/admin', to: 'sessions#admin', as: 'admin_log_in'
 
-  get '/dashbaord', to: 'dashboard#index', as: 'dashbaord_index'
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard_index'
+
+  get '/dashboard/edit', to: 'dashboard#edit', as: 'dashboard_edit'
+
+  get '/dashboard/create', to: 'dashboard#create', as: 'dashboard_create'
 end
