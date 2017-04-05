@@ -3,31 +3,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center">
-      <div class="form-group well">
-        <h1>Manage current paintings</h1>
-        <table class="table">
-          <% @paintings.each do |painting| %>
-          <tr>
-            <%= form_for painting, method: 'patch', url: "/galleries/#{@gallery.id}/#{painting.id}" do |f| %>
-            <th>
-              <%= f.text_field :title, :class => "form-control", value: "#{painting.title}" %>
-            </th>
-            <th>
-              <%= f.text_area :description, :class => "form-control", value: "#{painting.description}" %>
-            </th>
-            <th>
-              <%= painting.image %>
-            </th>
-            <th>
-              <%= f.file_field :image, :class => "form-control" %>
-            </th>
-            <th>
-              <%= f.submit "Submit", :class=>"btn btn-primary" %>
-            </th>
-            <% end %>
-          </tr>
-          <% end %>
-        </table><br>
+      <div class="form-group well" id="all-paintings">
+        <%= render :partial => "all_paintings" %>
       </div>
       <div class="form-group well">
         <h1>Create a new painting</h1>
