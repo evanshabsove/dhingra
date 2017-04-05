@@ -13,6 +13,12 @@ class DashboardController < ApplicationController
     @gallerys = Gallery.all
   end
 
+  def paintings
+    @gallery = Gallery.find(params[:id])
+    @paintings = @gallery.paintings
+  end
+
+  private
 
   def authorize_admin
     return unless !current_user.admin?
