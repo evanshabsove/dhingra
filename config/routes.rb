@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get '/blog', to: 'home#blog', as: 'blog'
 
   get '/admin', to: 'sessions#admin', as: 'admin_log_in'
+
+  get '/dashbaord', to: 'dashboard#index', as: 'dashbaord_index'
 end
