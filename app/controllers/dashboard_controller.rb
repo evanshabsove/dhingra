@@ -16,6 +16,7 @@ class DashboardController < ApplicationController
   def paintings
     @gallery = Gallery.find(params[:id])
     @paintings = @gallery.paintings
+    @painting = Painting.new
   end
 
   private
