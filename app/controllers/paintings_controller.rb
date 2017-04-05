@@ -14,7 +14,7 @@ class PaintingsController < ApplicationController
   end
 
   def create
-    @painting = Painting.new(painting_params)
+    @painting = @gallery.paintings.create(painting_params)
 
     if @painting.save
       redirect_to galleries_url
@@ -41,12 +41,13 @@ class PaintingsController < ApplicationController
 
   #Private params
   private
-  def painting_params
-    params.require(:painting).permit(:title, :description, :image)
-  end
 
   def load_gallery
     @gallery = Gallery.find(params[:gallery_id])
+  end
+
+  def painting_params
+    params.require(:painting).permit(:title, :description, :image)
   end
 
 end
