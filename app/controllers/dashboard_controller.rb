@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
   end
 
   def create
-    
+    @gallery = Gallery.new
   end
 
   def edit
