@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get '/dashboard/edit', to: 'dashboard#edit', as: 'dashboard_edit'
 
   get '/dashboard/create', to: 'dashboard#create', as: 'dashboard_create'
+
+  get '/dashboard/:id', to: 'dashboard#paintings', as: 'dashboard_painting'
 end
