@@ -36,7 +36,12 @@ class GalleriesController < ApplicationController
   def update
     @gallery = Gallery.find(params[:id])
     if @gallery.update_attributes(gallery_params)
-      redirect_to galleries_url
+      if current_user.admin == true
+        redirect_to dashboard_edit_url
+      # this is kind of strange b/c to access this controller you have to be admin. might change.
+      else
+        redirect_to galleries_url
+      end
     else
       render :edit
     end
