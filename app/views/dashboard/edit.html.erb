@@ -1,1 +1,30 @@
 <h1>edit dashboard</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="form-group well">
+        <table class="table">
+          <% @gallerys.each do |gallery| %>
+          <tr>
+            <th>
+              test
+            </th>
+            <%= form_for gallery, method: 'patch', url: "/galleries/#{gallery.id}" do |f| %>
+            <th>
+              <%= f.text_field :title, :class => "form-control", value: "#{gallery.title}" %>
+            </th>
+            <th>
+              <%= f.text_area :description, :class => "form-control", value: "#{gallery.description}" %>
+            </th>
+            <th>
+              <%= f.submit "Submit", :class=>"btn btn-primary" %>
+            </th>
+            <% end %>
+          </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

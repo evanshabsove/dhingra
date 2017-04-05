@@ -10,7 +10,7 @@ class DashboardController < ApplicationController
   end
 
   def edit
-    #code
+    @gallerys = Gallery.all
   end
 
 
