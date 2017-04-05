@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :paintings
   end
 
+  resources :sessions, only: [:create, :destroy]
+
   root 'home#index'
 
   get '/about', to: 'home#about', as: 'about'
@@ -11,4 +13,12 @@ Rails.application.routes.draw do
   get '/contact', to: 'home#contact', as: 'contact'
 
   get '/blog', to: 'home#blog', as: 'blog'
+
+  get '/admin', to: 'sessions#admin', as: 'admin_log_in'
+
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard_index'
+
+  get '/dashboard/edit', to: 'dashboard#edit', as: 'dashboard_edit'
+
+  get '/dashboard/create', to: 'dashboard#create', as: 'dashboard_create'
 end

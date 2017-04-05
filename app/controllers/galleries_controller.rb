@@ -1,5 +1,7 @@
 class GalleriesController < ApplicationController
 
+  before_filter :authorize_admin, :only => [:create, :update, :destroy]
+
   def index
     @galleries = Gallery.all
   end
@@ -20,7 +22,12 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new(gallery_params)
 
     if @gallery.save
-      redirect_to galleries_url
+      if current_user.admin == true
+        redirect_to dashboard_index_url
+      # this is kind of strange b/c to access this controller you have to be admin. might change.
+      else
+        redirect_to galleries_url
+      end
     else
       render :new
     end
@@ -29,7 +36,12 @@ class GalleriesController < ApplicationController
   def update
     @gallery = Gallery.find(params[:id])
     if @gallery.update_attributes(gallery_params)
-      redirect_to galleries_url
+      if current_user.admin == true
+        redirect_to dashboard_edit_url
+      # this is kind of strange b/c to access this controller you have to be admin. might change.
+      else
+        redirect_to galleries_url
+      end
     else
       render :edit
     end
@@ -45,5 +57,10 @@ class GalleriesController < ApplicationController
   private
   def gallery_params
     params.require(:gallery).permit(:title, :description)
+  end
+
+  def authorize_admin
+    return unless !current_user.admin?
+    redirect_to root_path, alert: 'Admins only!'
   end
 end
