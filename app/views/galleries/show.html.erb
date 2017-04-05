@@ -2,6 +2,8 @@
 <h1><%= @gallery.title %></h1>
 <% @gallery.paintings.each do |painting| %>
   <h4><%= painting.title %></h4>
+    <%= image_tag(painting.image_url) if painting.image? %>
+  <%= painting.description %>
 <% end %>
 
   <h3><%= link_to "Add a painting", new_gallery_painting_path(@gallery) %></h3>
