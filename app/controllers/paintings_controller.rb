@@ -23,7 +23,7 @@ class PaintingsController < ApplicationController
         format.js
         format.json { render json: {:success => true, html: (render_to_string('_all_paintings.html.erb', objects: [@gallery, @paintings], layout: false))} }
       end
-      
+
     else
       render :new
     end
