@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :paintings
   end
 
+  resources :contacts, only: [:new, :create]
   resources :sessions, only: [:create, :destroy]
 
   root 'home#index'

@@ -1,0 +1,30 @@
+<h1>Contact Me</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="form-group well">
+        <%= form_for @contact do |f| %>
+          <%= f.label :name %><br>
+          <%= f.text_field :name, required: true %>
+
+          <br>
+
+          <%= f.label :email %><br>
+          <%= f.email_field :email, required: true, :class => "form-control" %>
+
+          <br>
+
+          <%= f.label :message %><br>
+          <%= f.text_area :message, as: :text, :class => "form-control" %>
+
+          <div class="hidden">
+          <%= f.label :nickname %><br>
+          <%= f.text_field :nickname, hint: 'leave this field blank' %>
+          </div>
+
+          <%= f.submit "Submit", :class=>"btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
