@@ -1,6 +1,6 @@
 $( document ).on('turbolinks:load', function() {
 
-  $("#create_painting_button").on("click", function(){
+  $("#create_painting_button").on("submit", function(){
     event.preventDefault();
     var parent = $(this).parent()
     var id = parent.attr("id")
@@ -9,7 +9,7 @@ $( document ).on('turbolinks:load', function() {
       url: "/galleries/" + id + "/paintings",
       method: "post",
       dataType: "JSON",
-      data: $("#create_painting_button").serialize()
+      data: $(this).serialize()
     }).done(function(responseData){
       $("#all_paintings").html(responseData.html)
     });
