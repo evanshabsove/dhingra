@@ -23,8 +23,8 @@
               <%= f.label :description %>
               <%= f.text_area :description, :class => "form-control" %>
             </th>
-            <th>
-              <%= f.submit "Submit", :class=>"btn btn-primary" %>
+            <th id="<%= @gallery.id %>">
+              <%= f.submit "Submit", :class=>"btn btn-primary", :id => "create_painting_button" %>
             </th>
           </tr>
           <% end %>

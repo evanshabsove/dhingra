@@ -17,7 +17,11 @@ class PaintingsController < ApplicationController
     @painting = @gallery.paintings.create(painting_params)
 
     if @painting.save
-      redirect_to galleries_url
+      @paintings = Painting.all
+      respond_to do |format|
+        format.js
+        format.json { render json: {:success => true, html: (render_to_string('_all_paintings.html.erb', objects: [@gallery, @paintings], layout: false))} }
+      end
     else
       render :new
     end
