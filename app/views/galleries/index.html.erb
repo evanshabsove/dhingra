@@ -1,7 +1,5 @@
 <h1>Gallaries index</h1>
 <% @galleries.each do |gallery| %>
 
-<%= link_to "#{gallery.title}", gallery_path(gallery) %>
+<h3><%= link_to "#{gallery.title}", gallery_path(gallery) %></h3>
 <% end %>
-
-<%= link_to "create a new gallery", new_gallery_path %>
