@@ -1,6 +1,6 @@
 $( document ).on('turbolinks:load', function() {
 
-  $("#create_painting_button").on("submit", function(){
+  $("#create_painting_button").on("submit", function(event){
     event.preventDefault();
     var parent = $(this).parent()
     var id = parent.attr("id")
