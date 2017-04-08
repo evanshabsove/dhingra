@@ -20,10 +20,11 @@ class PaintingsController < ApplicationController
       @paintings = Painting.all
 
       respond_to do |format|
+        format.html
         format.js
         format.json { render json: {:success => true, html: (render_to_string('_all_paintings.html.erb', objects: [@gallery, @paintings], layout: false))} }
       end
-
+      redirect_to dashboard_index_path
     else
       render :new
     end
@@ -39,9 +40,9 @@ class PaintingsController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:id])
-    if @gallery.destroy
-      redirect_to galleries_url
+    @painting = Painting.find(params[:id])
+    if @painting.destroy
+      redirect_to dashboard_painting_url
     end
   end
 

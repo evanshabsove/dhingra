@@ -19,6 +19,7 @@
     </th>
     <th>
       <%= f.submit "Submit", :class=>"btn btn-primary" %>
+      <%= link_to "Delete Painting", gallery_painting_path(painting), method: :delete, data: {confirm: 'Are you sure?'} %>
     </th>
     <% end %>
   </tr>
