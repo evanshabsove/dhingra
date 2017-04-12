@@ -32,7 +32,7 @@ class PaintingsController < ApplicationController
   def update
     @painting = Painting.find(params[:id])
     if @painting.update_attributes(painting_params)
-      redirect_to galleries_url
+      redirect_to dashboard_painting_url(@gallery)
     else
       render :edit
     end
