@@ -28,7 +28,8 @@ $( document ).on('turbolinks:load', function() {
       dataType: "JSON",
       data: $("#new_painting").serialize()
     }).done(function(responseData){
-      $("#all_paintings").html(responseData.html)
+      console.log(responseData.html);
+      $("#all-paintings").html(responseData.html)
     });
   });
 
