@@ -2,7 +2,7 @@
 <table class="table">
   <% @paintings.each do |painting| %>
   <tr>
-    <%= form_for painting, method: 'patch', url: "/galleries/#{@gallery.id}/#{painting.id}" do |f| %>
+    <%= form_for painting, method: 'patch', url: "/galleries/#{@gallery.id}/paintings/#{painting.id}" do |f| %>
     <th>
       <%= f.text_field :title, :class => "form-control", value: "#{painting.title}" %>
     </th>
@@ -19,9 +19,11 @@
     </th>
     <th>
       <%= f.submit "Submit", :class=>"btn btn-primary" %>
-      <%= link_to "Delete", gallery_painting_path(painting), :class=>"btn btn-primary", method: :delete, data: {confirm: 'Are you sure?'} %>
     </th>
     <% end %>
+    <th>
+      <%= link_to "Delete", "/galleries/#{@gallery.id}/paintings/#{painting.id}", :class=>"btn btn-primary", method: :delete, data: {confirm: 'Are you sure?'} %>
+    </th>
   </tr>
   <% end %>
 </table><br>
