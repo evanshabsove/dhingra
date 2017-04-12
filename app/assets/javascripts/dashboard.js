@@ -4,6 +4,7 @@ $( document ).on('turbolinks:load', function() {
     event.preventDefault();
     var parent = $(this).parent()
     var id = parent.attr("id")
+    console.log("here");
     console.log($(this).serialize());
     $.ajax({
       url: "/galleries/" + id + "/paintings",
@@ -11,6 +12,8 @@ $( document ).on('turbolinks:load', function() {
       dataType: "JSON",
       data: $(this).serialize()
     }).done(function(responseData){
+      console.log(responseData.html);
+      console.log("hello");
       $("#all_paintings").html(responseData.html)
     });
   });
