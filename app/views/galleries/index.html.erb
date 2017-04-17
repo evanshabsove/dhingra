@@ -1,5 +1,29 @@
-<h1>Gallaries index</h1>
-<% @galleries.each do |gallery| %>
-
-<h3><%= link_to "#{gallery.title}", gallery_path(gallery) %></h3>
-<% end %>
+<div class="container-fluid gallery-index-container">
+  <% count = 0 %>
+  <% @galleries.each do |gallery| %>
+    <% if count%2 == 0  %>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1 image-gallery">
+          <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive") %>
+        </div>
+        <div class="col-md-7 col-md-offset-1 gallery-description">
+          <h1><%= link_to "#{gallery.title}", gallery_path(gallery) %></h1>
+          <h3><%= gallery.description %></h>
+        </div>
+      </div>
+      <hr class="feature-divider">
+    <% else %>
+      <div class="row">
+        <div class="col-md-8 gallery-description text-right right-column-gallery">
+          <h1><%= link_to "#{gallery.title}", gallery_path(gallery) %></h1>
+          <h3><%= gallery.description %></h>
+        </div>
+        <div class="col-md-3 image-gallery">
+          <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive") %>
+        </div>
+      </div>
+      <hr class="feature-divider">
+    <% end %>
+    <% count += 1 %>
+  <% end %>
+</div>
