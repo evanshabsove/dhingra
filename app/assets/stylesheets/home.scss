@@ -1,3 +1,33 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-page {
+  height: 100vh;
+  // not sure why this works lol
+  width: 1%;
+  background: url('6.JPG') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+body, html {
+  width: 100%;
+}
+
+.home-column {
+  text-align: center;
+  h1 {
+    font-size: 10em;
+    color: white;
+    text-decoration: underline;
+  }
+  a {
+    font-size: 3em;
+    color: white;
+  }
+}
