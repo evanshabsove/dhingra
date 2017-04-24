@@ -1,7 +1,17 @@
-<h1><%= @gallery.title %></h1>
-<br>
+
 <% @gallery.paintings.each do |painting| %>
-  <h4><%= painting.title %></h4>
-    <%= image_tag(painting.image_url) if painting.image? %>
-  <p><%= painting.description %></p>
+<div class="gallery-painting-container">
+  <div class="painting-container">
+    <div class="chevron-left">
+    </div>
+    <%= image_tag(painting.image_url, class:"gallery-painting") if painting.image? %>
+  </div>
+    <div class="gallery-painting-information-container">
+      <!-- <h1 class="gallery-painting-title"><%= painting.title %></h1>
+      <p class="gallery-painting-description"><%= painting.description %></p> -->
+      <h1 class="gallery-painting-title">Really incredible painting</h1>
+      <p class="gallery-painting-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu pretium odio, eu pharetra nunc. Sed imperdiet tempus egestas. Suspendisse aliquam mauris at lectus accumsan, id interdum justo sodales. Ut vitae imperdiet nulla. Nullam interdum odio non ipsum fermentum blandit.<br /><br /> Aliquam pharetra feugiat tristique. Nullam et justo sem.Aenean venenatis sagittis lorem id posuere. Sed ut varius sem. Aliquam vitae scelerisque neque. Vivamus id felis a turpis ultricies ullamcorper id sed nisl. Donec fermentum metus sit amet lacus eleifend, ut varius nibh sodales. Vivamus dignissim quis lectus non ultricies. Sed mattis quam erat, non condimentum nisi condimentum in. Donec sed.</p>
+    </div>
+</div>
+
 <% end %>
