@@ -49,3 +49,38 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  .painting-show-picture-container {
+      /* width: auto; */
+      /* height: auto; */
+      padding-top: 4vh;
+      /* margin-left: 3vw; */
+      display: block;
+      margin-left: 0px;
+      text-align: center;
+  }
+  .painting-show-picture {
+      max-width: 90vw;
+      max-height: 90vh;
+      /* margin-left: 5vw; */
+      /* margin-right: 5vw; */
+  }
+  .painting-show-title-container {
+    margin-left: 5vw;
+    width: 90vw;
+    /* margin-top: 3vh; */
+    /* margin-right: 2.5vw; */
+    /* left: 0; */
+    /* display: inline-block; */
+    /* top: -20px; */
+    /* top: 0; */
+    /* vertical-align: top; */
+    padding-top: 4vh;
+  }
+  .painting-show-description {
+      /* float: right; */
+      width: 90vw;
+      margin-top: 3vh;
+  }
+}
