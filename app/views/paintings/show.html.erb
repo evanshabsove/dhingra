@@ -1,4 +1,20 @@
 <div class="painting-show-container">
+  <div class="painting-show-picture-container">
+    <%= image_tag(@painting.image_url, class:"painting-show-picture") if @painting.image? %>
+  </div>
+  <div class="painting-show-title-container">
+    <div class="painting-text">
+      <h1 class="painting-show-title"><%= @painting.title %></h1>
+      <p class="painting-show-description">
+        <%= @painting.description %>
+      </p>
+    </div>
+    <div class="painting-show-interested">
+      <h3 class="painting-show-interested-title">Interested?</h3>
+      <p class="painting-show-interested-description">
+        If you are interesting in purchasing, or have any questions about this piece please feel free to <span class="contact-me-span">contact me</span>.
+      </p>
+    </div>
+  </div>
 
-  <%= @painting.title %>
 </div>

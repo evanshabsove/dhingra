@@ -1,0 +1,51 @@
+.painting-show-container {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 66px;
+}
+.painting-show-picture-container {
+    /* width: auto; */
+    /* height: auto; */
+    padding-top: 4vh;
+    margin-left: 3vw;
+    display: inline-block;
+}
+.painting-show-picture {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+.painting-show-title-container {
+    margin-left: 2vw;
+    // float: right;
+    width: 32vw;
+    /* margin-top: 3vh; */
+    margin-right: 2.5vw;
+    left: 0;
+    display: inline-block;
+    /* top: -20px; */
+    /* top: 0; */
+    vertical-align: top;
+    padding-top: 4vh;
+}
+.painting-show-title {
+    margin: 0;
+    /* margin-top: 1vh; */
+}
+.painting-show-description {
+  float: right;
+  width: 32vw;
+  margin-top: 3vh;
+  // margin-right: 2.5vw;
+  // margin-left: 3vw;
+}
+.painting-show-interested {
+    /* margin-left: 3vw; */
+    /* width: 40vw; */
+    display: inline-block;
+    /* background-color: white; */
+}
+.contact-me-span {
+    color: #00a0b3;
+    text-decoration: underline;
+    cursor: pointer;
+}
