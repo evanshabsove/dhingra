@@ -4,6 +4,5 @@ $(function() {
   })
   $(".gallery-painting").on("mouseout", function() {
     $(this).siblings(1).fadeOut("fast");
-
   })
 })
