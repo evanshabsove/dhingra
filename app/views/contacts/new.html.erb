@@ -4,23 +4,22 @@
     <div class="col-sm-12 text-center">
       <div class="form-group well">
         <%= form_for @contact do |f| %>
-          <%= f.label :name %><br>
-          <%= f.text_field :name, required: true %>
+        <div class="name-subject-container">
+          <%= f.label :name, hidden: true %>
+          <%= f.text_field :name, required: true, placeholder: "Name", class:"form-control half-field" %>
+          <%= f.label :subject, hidden: true %>
+          <%= f.text_field :subject, placeholder: "Subject", class: "form-control half-field" %>
+        </div>
 
-          <br>
+        <div class="contact-email-container">
+          <%= f.label :email, hidden: true %>
+          <%= f.email_field :email, required: true, placeholder: "Email", :class => "form-control" %>
+        </div>
+        <div class="contact-text-area">
+          <%= f.label :message, hidden: true %><br>
+          <%= f.text_area :message, as: :text, :class => "form-control contact-text-area-field", placeholder: "Message" %>
+        </div>
 
-          <%= f.label :subject %><br>
-          <%= f.text_field :subject %>
-
-          <br>
-
-          <%= f.label :email %><br>
-          <%= f.email_field :email, required: true, :class => "form-control" %>
-
-          <br>
-
-          <%= f.label :message %><br>
-          <%= f.text_area :message, as: :text, :class => "form-control" %>
 
           <div class="hidden">
           <%= f.label :nickname %><br>
