@@ -9,7 +9,7 @@
       <div class="form-group well">
         <h1>Create a new painting</h1>
         <table class="table">
-          <%= form_for [@gallery, @painting] do |f| %>
+          <%= form_for [@gallery, @painting], url: gallery_paintings_url(@gallery.id) do |f| %>
           <tr>
             <th>
               <%= f.label :title %>
