@@ -15,14 +15,18 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
       .hover-title {
         font-size: 30px;
+        display: flex;
         text-transform: uppercase;
         letter-spacing: 2.5px;
+        height: 100%;
         margin: 0;
+        width: 100%;
+        vertical-align: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
       }
 }
 
