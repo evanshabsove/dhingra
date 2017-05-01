@@ -15,18 +15,18 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  display: block;
       .hover-title {
-          font-size: 30px;
-          text-transform: uppercase;
-          position: relative;
-          /* padding-top: 6%; */
-          letter-spacing: 2.5px;
-          height: 100%;
-          margin: 0;
-          /* line-height: 18vh; */
-          padding-top: 21%;
-          font-size: 2.1vw;
+        font-size: 30px;
+        display: flex;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+        vertical-align: center;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
       }
 }
 
@@ -46,39 +46,47 @@
   height: auto;
   width: auto;
   cursor: pointer;
-
-  // flex-grow: 1;
 }
 .gallery-painting-div {
   opacity: 0;
 }
 h1.painting-title {
-    margin: 0;
+  margin: 0;
 }
 .gallery-paintings-container {
-    padding-top: 77px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  padding-top: 77px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none;
 }
 .painting-title-div {
-    margin-left: 10px;
-    margin-right: 10px;
-    position: relative;
-    margin-top: -52px;
-    margin-bottom: 10px;
-    padding-bottom: 3px;
-    background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.46));
-    padding-left: 5px;
-    color: white;
-    line-height: 0;
-    /* font-size: 10vw; */
-    display: none;
-    pointer-events: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  margin-top: -52px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.46));
+  padding-left: 5px;
+  color: white;
+  line-height: 0;
+  display: none;
+  pointer-events: none;
+  text-decoration: none;
 }
 .gallery-index-item {
   opacity: 0;
   position: relative !important;
   padding: 0 !important;
   margin: 10px !important;
+}
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 30% !important;
+  }
+}
+
+.painting-link {
+  text-decoration: none !important;
 }
