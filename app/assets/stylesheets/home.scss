@@ -15,11 +15,10 @@
   vertical-align: middle;
 }
 .opening-title {
-  font-family: "Lato";
-  text-decoration: none !important;
-  display: none;
-  margin-bottom: 12vh;
-
+    font-family: "Lato";
+    display: none;
+    margin-bottom: 12vh;
+    text-shadow: 3px 1px 5px rgba(0, 0, 0, 0.47);
 }
 .home-page-link {
   display: none;
