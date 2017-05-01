@@ -17,8 +17,12 @@
 .opening-title {
   font-family: "Lato";
   text-decoration: none !important;
+  display: none;
+  margin-bottom: 12vh;
+
 }
 .home-page-link {
+  display: none;
     font-family: "Lato";
     font-weight: 300;
     /* color: gray; */
@@ -41,7 +45,9 @@ body, html {
 }
 
 .home-column {
+  // display: none;
   text-align: center;
+  height: 378px;
   h1 {
     font-size: 10em;
     color: white;
