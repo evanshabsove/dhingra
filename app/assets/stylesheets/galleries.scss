@@ -81,6 +81,12 @@ h1.painting-title {
   padding: 0 !important;
   margin: 10px !important;
 }
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 30% !important;
+  }
+}
+
 .painting-link {
   text-decoration: none !important;
 }

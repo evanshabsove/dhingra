@@ -22,8 +22,12 @@ class DashboardController < ApplicationController
   private
 
   def authorize_admin
-    return unless !current_user.admin?
-    redirect_to root_path, alert: 'Admins only!'
+    if current_user
+      return unless !current_user.admin?
+      redirect_to root_path, alert: 'Admins only!'
+    else
+      redirect_to root_url, alert: "Must log in"
+    end
   end
 
 end
