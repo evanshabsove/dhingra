@@ -12,7 +12,7 @@
     <th>
       <!-- commenting this out for now b/c too lazy to make css sho image shows up okay -->
       <%# image_tag(painting.image_url, :class => "img-responsive") if painting.image? %>
-      <%= painting.image %>
+      <%= image_tag(painting.image_url, class: "gallery-painting") if painting.image? %>
     </th>
     <th>
       <%= f.file_field :image, :class => "form-control" %>
