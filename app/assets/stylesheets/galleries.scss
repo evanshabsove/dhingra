@@ -30,6 +30,12 @@
       }
 }
 
+.center.slider {
+  margin-top: 0px;
+  padding-top: 14vh;
+  width: 85%;
+}
+
 
 .image-gallery {
   &:hover {
@@ -89,4 +95,27 @@ h1.painting-title {
 
 .painting-link {
   text-decoration: none !important;
+}
+
+.slider {
+  width: 50%;
+  margin: 100px auto;
+}
+
+.slick-slide {
+  margin: 10px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+  transform: scale(0.9);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+.slick-dotted .slick-current img {
+  transform: scale(1.1);
 }

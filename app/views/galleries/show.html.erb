@@ -1,3 +1,11 @@
+<section class="center slider">
+  <% @gallery.paintings.each do |painting| %>
+    <div>
+      <%= image_tag(painting.image_url, class:"gallery-painting") if painting.image? %>
+    </div>
+  <% end %>
+</section>
+
 <div class="gallery-paintings-container">
   <% @gallery.paintings.each do |painting| %>
   <%= link_to gallery_painting_url(@gallery.id, painting.id), class:"painting-link" do %>
