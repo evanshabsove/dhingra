@@ -1,8 +1,36 @@
-<div class="container-fluid home-page">
-  <div class="row">
+<div class="container-fluid home-container">
+  <div class="row home-page">
     <div class="col-sm-12 home-column">
       <h1 class="opening-title">Alan Dhingra</h1>
       <%= link_to "See All Galleries", galleries_path, :class => "home-page-link" %>
     </div>
+  </div>
+  <div class="row quick-about">
+    <div class="col-sm-6 about-text-col">
+      <h1 class="about-title">ABOUT</h1>
+      <h3>A graduate of the Ontario College of Art, Alan has been painting, drawing, printmaking and exhibiting for over 30 years.
+Alan Dhingra and his family immigrated to Canada in 1966.  His love of nature, hiking and exploration began the day he enrolled in the 65th Toronto High Park Boy Scout Troop.  Since then he has paddled and hiked many miles while camping with his friends and family.</h3>
+      <h3>Alan's love of the natural world, his enjoyment of canoeing and camping and his affinity for the topographic maps used during his trips to the wilderness have culminated in a new series. Alan combines pattern, texture and colour while exploring the relationship of positive and negative space.
+Alan has taught at Arts Alive Stratford, lead group workshops, taught private and group classes and continues to offer private printmaking classes. He lives and maintains a studio, Studio 234, in St. Marys, Ontario.</h3>
+    </div>
+    <div class="col-sm-6 about-image-col">
+      <%= image_tag "6.JPG", :class => "img-responsive" %>
+    </div>
+  </div>
+  <div class="row three-galleries">
+    <div class="col-sm-12">
+      <h1>FEATURED GALLERIES</h1>
+    </div>
+    <% @featured_galleries.each do |gallery| %>
+    <%= link_to gallery_url(gallery.id) do  %>
+      <div class="col-sm-4 gallery-index-item">
+        <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
+        <div class="hover-content">
+          <h1 class="hover-title"><%= gallery.title %></h1>
+          <!-- <span class="hover-description"><%= gallery.description %></span> -->
+        </div>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

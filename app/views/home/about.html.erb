@@ -1,14 +1,32 @@
 <div class="container-fluid about-container">
   <div class="row">
     <div class="col-sm-12 text-center">
-      <%= image_tag('Man.jpeg', :class => "img-circle alan-image") %>
+      <h1>ABOUT</h1>
     </div>
-    <div class="col-sm-10 col-sm-offset-2">
+    <div class="col-sm-12">
       <h1>Alan Dhingra</h1>
       <h3>I love painting, painting is something that I do. In fact it's something I do so much I wanted to make a website on it!</h3>
       <h3>I'll even teach you to paint as good as me! Just three easy payments of 1000 dollars and will be on our way. (no refunds)</h3>
       <h3>Be sure to contact me of any questions</h3>
-      <button type="button" name="button" class="btn btn-primary">Contact Me</button>
     </div>
+    <div class="col-sm-12 art-gallery-image">
+      <%= image_tag("121132105.jpg", :class => "img-responsive") %>
+    </div>
+  </div>
+  <div class="row three-galleries">
+    <div class="col-sm-12">
+      <h1>FEATURED GALLERIES</h1>
+    </div>
+    <% @featured_galleries.each do |gallery| %>
+    <%= link_to gallery_url(gallery.id) do  %>
+      <div class="col-sm-4 gallery-index-item">
+        <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
+        <div class="hover-content">
+          <h1 class="hover-title"><%= gallery.title %></h1>
+          <!-- <span class="hover-description"><%= gallery.description %></span> -->
+        </div>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

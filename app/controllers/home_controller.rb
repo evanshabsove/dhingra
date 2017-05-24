@@ -1,10 +1,9 @@
 class HomeController < ApplicationController
   def home
-    #code
   end
 
   def about
-    #code
+    @featured_galleries = Gallery.first(3)
   end
 
   def contact
@@ -13,5 +12,9 @@ class HomeController < ApplicationController
 
   def blog
     #code
+  end
+
+  def index
+    @featured_galleries = Gallery.first(3)
   end
 end

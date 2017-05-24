@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home-page {
-  height: 100vh;
+  height: 70vh;
   // not sure why this works lol
   width: 1%;
   background: url('6.JPG') no-repeat center center fixed;
@@ -14,12 +14,14 @@
   display: table-cell;
   vertical-align: middle;
 }
+
 .opening-title {
     font-family: "Lato";
     display: none;
     margin-bottom: 12vh;
     text-shadow: 3px 1px 5px rgba(0, 0, 0, 0.47);
 }
+
 .home-page-link {
   display: none;
     font-family: "Lato";
@@ -33,11 +35,15 @@
     background-color: rgba(80, 80, 80, 0.16);
     transition: background-color 0.2s ease;
 }
+
 .home-page-link:hover {
     background-color: rgba(80, 80, 80, 0.8);
     color: white;
 }
 
+div.home-container {
+  padding: 0;
+}
 
 body, html {
   width: 100%;
@@ -56,4 +62,8 @@ body, html {
     font-size: 3em;
     color: white;
   }
+}
+
+.first-photo {
+  margin-left: 50px;
 }

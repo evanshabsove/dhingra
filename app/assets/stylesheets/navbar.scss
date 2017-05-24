@@ -1,13 +1,31 @@
 nav.navbar {
   border-color: transparent;
   margin-bottom: 0 !important;
-  position: absolute !important;
   width: 100% !important;
   z-index: 100 !important;
+}
+
+nav.navbar-default {
+  background-color: transparent;
 }
 
 .navbar {
   border-radius: 0 !important;
   padding-top: 0.5em !important;
   padding-bottom: 0.5em !important;
+}
+
+div.header-section {
+  padding: 0;
+  background-color: transparent;
+}
+
+.navbar.transparent.navbar-default {
+   border-width: 0px;
+   -webkit-box-shadow: 0px 0px;
+   box-shadow: 0px 0px;
+   background-color: rgba(0,0,0,0.0);
+   background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+   background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
 }
