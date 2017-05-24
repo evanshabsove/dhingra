@@ -3,6 +3,9 @@
   <% @paintings.each do |painting| %>
   <tr>
     <%= form_for painting, method: 'patch', url: "/galleries/#{@gallery.id}/paintings/#{painting.id}" do |f| %>
+    <th class="thumbnail">
+      <%= image_tag(painting.image_url, class: "img-thumbnail") if painting.image? %>
+    </th>
     <th>
       <%= f.text_field :title, :class => "form-control", value: "#{painting.title}" %>
     </th>
@@ -12,11 +15,9 @@
     <th>
       <!-- commenting this out for now b/c too lazy to make css sho image shows up okay -->
       <%# image_tag(painting.image_url, :class => "img-responsive") if painting.image? %>
-      <%= painting.image %>
-    </th>
-    <th>
-      <%= f.file_field :image, :class => "form-control" %>
-    </th>
+      <th>
+        <%= f.file_field :image, :class => "form-control" %>
+      </th>
     <th>
       <%= f.submit "Submit", :class=>"btn btn-primary" %>
     </th>
