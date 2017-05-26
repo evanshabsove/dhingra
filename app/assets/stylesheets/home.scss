@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .home-page {
-  height: 70vh;
+  height: 75vh;
   // not sure why this works lol
   width: 1%;
   background: url('6.JPG') no-repeat center center fixed;
@@ -66,4 +66,38 @@ body, html {
 
 .first-photo {
   margin-left: 50px;
+}
+
+.quick-about {
+  padding-top: 10vh
+}
+
+.about-text-col {
+  margin-left: 15px;
+  background-color: #d3d3d3;
+  padding: 20px;
+
+  h1 {
+    margin-bottom: 25px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 25px;
+  }
+}
+
+.about-image-col {
+  padding: 20px;
+  background-color: #d3d3d3;
+  margin-left: 25px;
+}
+
+.three-galleries {
+  margin-top: 10vh;
+
+  .col-sm-12 {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
 }

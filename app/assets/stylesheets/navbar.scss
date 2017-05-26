@@ -11,13 +11,17 @@ nav.navbar-default {
 
 .navbar {
   border-radius: 0 !important;
-  padding-top: 0.5em !important;
   padding-bottom: 0.5em !important;
 }
 
-div.header-section {
-  padding: 0;
-  background-color: transparent;
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
 }
 
 .navbar.transparent.navbar-default {
@@ -28,4 +32,38 @@ div.header-section {
    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+
+#main-title {
+  h1 {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-weight: bold;
+    letter-spacing: 3px;
+  }
+
+  .gallery-cursive {
+    font-family: 'Great Vibes', Helvetica, sans-serif;
+    text-shadow: 4px 4px 3px rgba(0,0,0,0.1);
+    font-size: 28px;
+    margin-bottom: 2.5vh;
+  }
+}
+
+.header-section.container-fluid {
+  width: 100%;
+  // position: absolute;
+  // background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  // background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  padding: 0;
+}
+
+// some strange bootstrap stuff is happening on my end, delete this if it's just me
+
+div.row {
+  margin-right: 0px;
+  margin-left: 0px;
 }
