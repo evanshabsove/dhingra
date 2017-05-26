@@ -24,7 +24,7 @@ Alan has taught at Arts Alive Stratford, lead group workshops, taught private an
       <h1>FEATURED GALLERIES</h1>
     </div>
     <% @featured_galleries.each do |gallery| %>
-    <%= link_to gallery_url(gallery.id) do  %>
+     <%= link_to gallery_url(gallery.id) do  %>
       <div class="col-sm-4 gallery-index-item">
         <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
         <div class="hover-content">
