@@ -120,3 +120,11 @@ h1.painting-title {
 .slick-dotted .slick-current img {
   transform: scale(1.1);
 }
+
+.slick-prev:before, .slick-next:before {
+    color:red !important;
+}
+
+button.slick-next, button.slick-prev {
+  margin-top: 50px;
+}
