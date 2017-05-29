@@ -17,6 +17,6 @@ $( document ).on('turbolinks:load', function() {
 
   $(".center").on('beforeChange', function(event, slick, direction){
     value = $(".slick-current").attr("class")[0]
-    $("#" + value).fadeOut()
+    $("#" + value).fadeOut(505)
   })
 });
