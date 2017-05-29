@@ -128,3 +128,18 @@ h1.painting-title {
 button.slick-next, button.slick-prev {
   margin-top: 50px;
 }
+
+.gallery-text {
+  display: none;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.contact-text {
+  h4 {
+    display: inline;
+    margin-right: 15px;
+  }
+  margin-bottom: 5vh;
+}
