@@ -16,7 +16,20 @@
   </head>
 
   <body>
-  <div class="header-section container-fluid">
+
+  <% unless css_slug == "home-index" %>
+    <style media="screen">
+      .header-section {
+        background: url('6.JPG') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
+  <% end %>
+
+  <div class="header-section container-fluid <%= css_slug %>">
     <div class="row">
       <div id="main-title" class="col-sm-12 text-center">
         <h1>ALAN DHINGRA</h1>

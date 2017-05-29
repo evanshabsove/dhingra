@@ -7,8 +7,10 @@ $( document ).on('turbolinks:load', function() {
     slidesToScroll: 3
   });
 
-  value = $(".slick-current").attr("class")[0]
-  $("#" + value).fadeIn()
+  if ($(".slick-current").length) {
+    value = $(".slick-current").attr("class")[0]
+    $("#" + value).fadeIn()
+  }
 
   $(".center").on('afterChange', function(event, slick, direction){
     value = $(".slick-current").attr("class")[0]
