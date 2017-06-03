@@ -1,17 +1,19 @@
 <div class="container gallery-index-container">
-  <% @galleries.in_groups_of(3, false) do |g| %>
-    <div class="row">
-      <% g.each do |gallery| %>
-      <%= link_to gallery_url(gallery.id) do  %>
-        <div class="col-sm-4 gallery-index-item">
-          <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
-          <div class="hover-content">
-            <h1 class="hover-title"><%= gallery.title %></h1>
-            <!-- <span class="hover-description"><%= gallery.description %></span> -->
+  <% unless @galleries == nil %>
+    <% @galleries.in_groups_of(3, false) do |g| %>
+      <div class="row">
+        <% g.each do |gallery| %>
+        <%= link_to gallery_url(gallery.id) do  %>
+          <div class="col-sm-4 gallery-index-item">
+            <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
+            <div class="hover-content">
+              <h1 class="hover-title"><%= gallery.title %></h1>
+              <!-- <span class="hover-description"><%= gallery.description %></span> -->
+            </div>
           </div>
-        </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   <% end %>
 </div>

@@ -23,15 +23,17 @@ Alan has taught at Arts Alive Stratford, lead group workshops, taught private an
     <div class="col-sm-12">
       <h1>FEATURED GALLERIES</h1>
     </div>
-    <% @featured_galleries.each do |gallery| %>
-     <%= link_to gallery_url(gallery.id) do  %>
-      <div class="col-sm-4 gallery-index-item">
-        <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
-        <div class="hover-content">
-          <h1 class="hover-title"><%= gallery.title %></h1>
-          <!-- <span class="hover-description"><%= gallery.description %></span> -->
+    <% unless @featured_galleries == nil %>
+      <% @featured_galleries.each do |gallery| %>
+       <%= link_to gallery_url(gallery.id) do  %>
+        <div class="col-sm-4 gallery-index-item">
+          <%= image_tag(gallery.paintings.first.image_url, :class => "img-responsive image-gallery") %>
+          <div class="hover-content">
+            <h1 class="hover-title"><%= gallery.title %></h1>
+            <!-- <span class="hover-description"><%= gallery.description %></span> -->
+          </div>
         </div>
-      </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
