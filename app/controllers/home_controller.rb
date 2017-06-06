@@ -4,10 +4,13 @@ class HomeController < ApplicationController
 
   def about
     @featured_galleries = Gallery.first(3)
+    @entry = Entry.where(category: "about").first
   end
 
   def contact
     #code
+    @entry = Entry.where(category: "contact").first
+
   end
 
   def blog

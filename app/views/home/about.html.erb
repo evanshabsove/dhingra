@@ -5,9 +5,7 @@
     </div>
     <div class="col-sm-12 about-text">
       <h3>Alan Dhingra</h3>
-      <p>I love painting, painting is something that I do. In fact it's something I do so much I wanted to make a website on it!</p>
-      <p>I'll even teach you to paint as good as me! Just three easy payments of 1000 dollars and will be on our way. (no refunds)</p>
-      <p>Be sure to <%= link_to 'Contact me', new_contact_path %> of any questions</p>
+      <%= simple_format(@entry.description) %>
     </div>
     <div class="col-sm-12 art-gallery-image">
       <%= image_tag("121132105.jpg", :class => "img-responsive about-image") %>

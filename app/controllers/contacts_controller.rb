@@ -2,6 +2,7 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
+    @entry = Entry.where(category: "contact").first
   end
 
   def create
