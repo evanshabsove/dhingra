@@ -1,5 +1,6 @@
 class DashboardController < ApplicationController
   before_filter :authorize_admin
+  before_filter :check_entries
 
   def index
     #code
@@ -19,7 +20,24 @@ class DashboardController < ApplicationController
     @painting = Painting.new
   end
 
+  def information
+
+    @contact = Entry.where(category: "contact").first
+    @about = Entry.where(category: "about").first
+
+
+  end
+
   private
+
+  def check_entries
+    if Entry.where(category: "contact").length == 0
+      Entry.create!(category: "contact")
+    end
+    if Entry.where(category: "about").length == 0
+      Entry.create!(category: "about")
+    end
+  end
 
   def authorize_admin
     if current_user
