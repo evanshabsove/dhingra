@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   end
 
   resources :contacts, only: [:new, :create]
+  resources :entries
+
   resources :sessions, only: [:create, :destroy]
 
   root 'home#index'
