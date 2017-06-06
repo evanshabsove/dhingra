@@ -1,4 +1,4 @@
-$( document ).on('turbolinks:load', function() {
+$(function(){
 
   // $(document).on('click','#create_painting_button', {}, function(){
   //   event.preventDefault();

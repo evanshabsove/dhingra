@@ -1,6 +1,5 @@
 
-$( document ).on('turbolinks:load', function() {
-
+$(function(){
   $("#enter-now-button").on("click", function() {
       $("body").scrollTo(0,500);
   });

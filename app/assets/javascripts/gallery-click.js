@@ -1,4 +1,4 @@
-$( document ).on('turbolinks:load', function() {
+$(function(){
   $(".gallery-painting").on('mouseover', function() {
     $(this).siblings(1).fadeIn("fast");
   })

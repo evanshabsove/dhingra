@@ -1,5 +1,4 @@
-$( document ).on('turbolinks:load', function() {
-  $(".center").slick({
+$(function(){  $(".center").slick({
     dots: true,
     infinite: true,
     centerMode: true,

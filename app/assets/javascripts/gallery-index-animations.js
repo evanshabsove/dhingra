@@ -1,5 +1,4 @@
-$( document ).on('turbolinks:load', function() {
-
+$(function(){
   animateObjects(".gallery-index-item")
   animateObjects(".gallery-painting-div")
 
