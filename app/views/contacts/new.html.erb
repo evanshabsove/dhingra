@@ -1,8 +1,12 @@
-<div class="contact-information-container">
-  <%= simple_format(@entry.description) %>
-</div>
 <div class="container contact-container">
   <div class="row">
+    <div class="col-sm-12 contact-text-col">
+      <% unless @entry == nil %>
+        <p>
+          <%= simple_format(@entry.description) %>
+        </p>
+      <% end %>
+    </div>
     <div class="col-sm-12 text-center">
       <div class="form-group well">
         <%= form_for @contact do |f| %>

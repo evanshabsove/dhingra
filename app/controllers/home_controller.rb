@@ -19,5 +19,6 @@ class HomeController < ApplicationController
 
   def index
     @featured_galleries = Gallery.first(3)
+    @entry = Entry.where(category: "about").first
   end
 end

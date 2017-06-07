@@ -4,8 +4,10 @@
       <h1>ABOUT</h1>
     </div>
     <div class="col-sm-12 about-text">
-      <h3>Alan Dhingra</h3>
-      <%= simple_format(@entry.description) %>
+      <% unless @entry == nil %>
+        <h3>Alan Dhingra</h3>
+        <%= simple_format(@entry.description) %>
+      <% end %>
     </div>
     <div class="col-sm-12 art-gallery-image">
       <%= image_tag("121132105.jpg", :class => "img-responsive about-image") %>
