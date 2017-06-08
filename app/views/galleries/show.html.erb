@@ -10,15 +10,13 @@
 <section class="slider-text">
   <div class="container">
     <div class="row">
-      <% count = 0 %>
-      <% @gallery.paintings.each do |painting| %>
-      <div class="col-sm-12 gallery-text" id="<%= count %>">
+      <% @gallery.paintings.each_with_index do |painting, index| %>
+      <div class="col-sm-12 gallery-text" id="<%= index %>">
         <h1><%= painting.title %></h1>
         <p>
           <%= painting.description %>
         </p>
       </div>
-      <% count +=1 %>
       <% end %>
     </div>
   </div>
