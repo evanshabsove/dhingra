@@ -46,12 +46,13 @@
   }
 }
 .gallery-painting {
-  max-height: 50vh;
-  max-width: 90vw;
+  // max-height: 50vh;
+  // max-width: 90vw;
   margin: 10px;
   height: auto;
   width: auto;
   cursor: pointer;
+      // width: 45vw !important;
 }
 .gallery-painting-div {
   opacity: 0;

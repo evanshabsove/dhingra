@@ -1,11 +1,50 @@
 <section class="center slider">
   <% @gallery.paintings.each_with_index do |painting, index| %>
-  <div class="<%= index %>" value="<%= index %>">
-    <%= image_tag(painting.image_url, class:"gallery-painting") if painting.image? %>
+  <div class="<%= index %> painting-image" value="<%= index %>">
+    <%= image_tag(painting.image_url, class:"gallery-painting", 'data-target': "##{painting.id}", 'data-toggle': "modal") if painting.image? %>
   </div>
   <% end %>
 </section>
-<section class="slider-text">
+<% @gallery.paintings.each_with_index do |painting, index| %>
+  <div id="<%= painting.id %>" class="modal fade" role="dialog">
+    <div class="modal-dialog"> -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= painting.title %></h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-body-image">
+            <%= image_tag(painting.image_url, class:"modal-image") if painting.image? %>
+
+          </div>
+          <div class="modal-body-description">
+            <p><%= painting.description %></p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+
+<!-- <% @gallery.paintings.each_with_index do |painting, index| %>
+  <div class="painting-information-container-background modal fade">
+    <div class="painting-information-container modal-content">
+      <%= image_tag(painting.image_url, class:"painting-information-picture") if painting.image? %>
+      <div class="painting-information-text">
+        <h2 class="painting-information-title"><%= painting.title %></h2>
+        <p class="painting-information-description">
+          <%= painting.description %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %> -->
+<!-- <section class="slider-text">
   <div class="container">
     <div class="row">
       <% @gallery.paintings.each_with_index do |painting, index| %>
@@ -18,7 +57,7 @@
       <% end %>
     </div>
   </div>
-</section>
+</section> -->
 <section class="contact-me">
   <div class="container">
     <div class="row">
