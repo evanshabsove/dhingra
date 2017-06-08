@@ -1,10 +1,8 @@
 <section class="center slider">
-  <% count = 0 %>
-  <% @gallery.paintings.each do |painting| %>
-  <div class="<%= count %>" value="<%= count %>">
+  <% @gallery.paintings.each_with_index do |painting, index| %>
+  <div class="<%= index %>" value="<%= index %>">
     <%= image_tag(painting.image_url, class:"gallery-painting") if painting.image? %>
   </div>
-  <% count +=1 %>
   <% end %>
 </section>
 <section class="slider-text">
