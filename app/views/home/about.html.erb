@@ -1,11 +1,7 @@
 <div class="container about-container">
   <div class="row">
-    <div class="col-sm-12 text-center">
-      <h1>ABOUT</h1>
-    </div>
     <div class="col-sm-12 about-text">
       <% unless @entry == nil %>
-        <h3>Alan Dhingra</h3>
         <%= simple_format(@entry.description) %>
       <% end %>
     </div>
