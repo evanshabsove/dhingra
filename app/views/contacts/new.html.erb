@@ -25,13 +25,6 @@
           <%= f.label :message, hidden: true %><br>
           <%= f.text_area :message, as: :text, :class => "form-control contact-text-area-field", placeholder: "Message" %>
         </div>
-
-
-          <div class="hidden">
-          <%= f.label :nickname %><br>
-          <%= f.text_field :nickname, hint: 'leave this field blank' %>
-          </div>
-
           <%= f.submit "Submit", :class=>"btn btn-primary"%>
         <% end %>
       </div>
