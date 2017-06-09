@@ -19,4 +19,14 @@
       <%= f.submit "Save", class: "btn btn-primary" %>
     </div>
   <% end %>
+  <h1>Homepage</h1>
+  <legend></legend>
+  <%= form_for @homepage, url: entry_url(@homepage.id) do |f| %>
+    <div class="form-group">
+      <%= f.text_area :description, placeholder: "Description", class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Save", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>

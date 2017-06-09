@@ -24,6 +24,7 @@ class DashboardController < ApplicationController
 
     @contact = Entry.where(category: "contact").first
     @about = Entry.where(category: "about").first
+    @homepage = Entry.where(category: "homepage").first
 
 
   end
@@ -36,6 +37,9 @@ class DashboardController < ApplicationController
     end
     if Entry.where(category: "about").length == 0
       Entry.create!(category: "about")
+    end
+    if Entry.where(category: "homepage").length == 0
+      Entry.create!(category: "homepage")
     end
   end
 
