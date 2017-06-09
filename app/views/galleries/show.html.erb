@@ -15,11 +15,11 @@
         </div>
         <div class="modal-body">
           <div class="modal-body-image">
-            <%= image_tag(painting.image_url, class:"modal-image") if painting.image? %>
+            <%= image_tag(painting.image_url, class:"img-responsive") if painting.image? %>
 
           </div>
           <div class="modal-body-description">
-            <p><%= painting.description %></p>
+            <h4><%= painting.description %></h4>
           </div>
         </div>
         <div class="modal-footer">
