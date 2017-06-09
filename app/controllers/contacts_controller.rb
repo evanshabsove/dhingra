@@ -8,8 +8,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(update_params)
     if @contact.save
-      raise 'hit'
-      ContactMeMailer.send_email(@contact)
+      ContactMeMailer.send_email(@contact).deliver
       redirect_to root_url
       flash[:notice] = "Email succesfully sent!"
     else

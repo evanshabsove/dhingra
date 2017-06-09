@@ -31,6 +31,16 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV["send_gird_user"],
+    :password => ENV["send_gird_pass"],
+    :domain => 'alandhingra.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

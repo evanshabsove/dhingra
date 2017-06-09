@@ -49,6 +49,7 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
+
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
@@ -56,6 +57,16 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "dhingra_#{Rails.env}"
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV["send_gird_user"],
+    :password => ENV["send_gird_pass"],
+    :domain => 'alandhingra.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

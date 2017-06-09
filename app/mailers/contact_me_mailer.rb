@@ -3,9 +3,8 @@ class ContactMeMailer < ApplicationMailer
 
 # send a signup email to the user, pass in the user object that   contains the user's email address
   def send_email(contact)
-    raise 'hit'
     @contact = contact
-    mail( :to => @user.email,
-    :subject => 'Thanks for signing up for our amazing app' )
+    mail( :to => ENV['email_address'],
+    :subject => @contact.subject )
   end
 end
