@@ -2,9 +2,10 @@ $(function(){  $(".center").slick({
     dots: true,
     infinite: true,
     centerMode: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    rows: 1,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true
+
   });
 
   if ($(".slick-current").length) {

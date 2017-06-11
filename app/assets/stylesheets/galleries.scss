@@ -46,21 +46,22 @@
   }
 }
 .gallery-painting {
-  // max-height: 50vh;
-  // max-width: 90vw;
-  // margin: 10px;
-  height: auto;
-  width: auto;
-  cursor: pointer;
-      width: 45vw !important;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    // width: 50vw !important;
+    margin: auto;
+}
+.painting-image {
+  text-align: center;
 }
 .slick-slide{
-width: 45vw !important;
+  // width: 50vw !important;
 }
 .slick-track {
-    max-height: 80vh !important;
-    height: 80vh !important;
-    overflow: hidden;
+    // max-height: 80vh !important;
+    // height: 80vh !important;
+    // overflow: hidden;
 }
 
 .gallery-painting-div {
