@@ -3,7 +3,8 @@ $(function(){  $(".center").slick({
     infinite: true,
     centerMode: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    rows: 1,
   });
 
   if ($(".slick-current").length) {

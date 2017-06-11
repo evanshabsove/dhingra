@@ -48,12 +48,21 @@
 .gallery-painting {
   // max-height: 50vh;
   // max-width: 90vw;
-  margin: 10px;
+  // margin: 10px;
   height: auto;
   width: auto;
   cursor: pointer;
-      // width: 45vw !important;
+      width: 45vw !important;
 }
+.slick-slide{
+width: 45vw !important;
+}
+.slick-track {
+    max-height: 80vh !important;
+    height: 80vh !important;
+    overflow: hidden;
+}
+
 .gallery-painting-div {
   opacity: 0;
 }
