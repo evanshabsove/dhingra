@@ -46,7 +46,7 @@
   }
 }
 .gallery-painting {
-    height: auto;
+    max-height: 50vh !important;
     width: auto;
     cursor: pointer;
     // width: 50vw !important;
@@ -54,16 +54,12 @@
 }
 .painting-image {
   text-align: center;
+  max-height: 50vh !important;
+  width: auto;
 }
-.slick-slide{
-  // width: 50vw !important;
+.slick-track{
+  max-height: 50vh !important;
 }
-.slick-track {
-    // max-height: 80vh !important;
-    // height: 80vh !important;
-    // overflow: hidden;
-}
-
 .gallery-painting-div {
   opacity: 0;
 }
@@ -119,7 +115,7 @@ h1.painting-title {
 }
 
 .slick-slide img {
-  width: 100%;
+  // width: 100%;
   transform: scale(0.9);
 }
 
