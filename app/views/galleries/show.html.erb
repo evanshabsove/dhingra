@@ -1,7 +1,7 @@
 <section class="center slider">
   <% @gallery.paintings.each_with_index do |painting, index| %>
   <div class="<%= index %> painting-image" value="<%= index %>">
-    <%= image_tag(painting.image_url, class:"gallery-painting", 'data-target': "##{painting.id}", 'data-toggle': "modal") if painting.image? %>
+    <%= image_tag(painting.image_url(:large), class:"gallery-painting", 'data-target': "##{painting.id}", 'data-toggle': "modal") if painting.image? %>
   </div>
   <% end %>
 </section>
@@ -15,7 +15,7 @@
         </div>
         <div class="modal-body">
           <div class="modal-body-image">
-            <%= image_tag(painting.image_url, class:"img-responsive") if painting.image? %>
+            <%= image_tag(painting.image_url(:large), class:"img-responsive") if painting.image? %>
 
           </div>
           <div class="modal-body-description">
