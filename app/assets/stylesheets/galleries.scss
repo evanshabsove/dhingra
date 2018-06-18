@@ -93,6 +93,9 @@ h1.painting-title {
   position: relative !important;
   padding: 0 !important;
   margin: 1.665% !important;
+  .image-gallery {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
