@@ -46,13 +46,19 @@
   }
 }
 .gallery-painting {
-  // max-height: 50vh;
-  // max-width: 90vw;
-  margin: 10px;
-  height: auto;
+    max-height: 50vh !important;
+    width: auto;
+    cursor: pointer;
+    // width: 50vw !important;
+    margin: auto;
+}
+.painting-image {
+  text-align: center;
+  max-height: 50vh !important;
   width: auto;
-  cursor: pointer;
-      // width: 45vw !important;
+}
+.slick-track{
+  max-height: 50vh !important;
 }
 .gallery-painting-div {
   opacity: 0;
@@ -109,7 +115,7 @@ h1.painting-title {
 }
 
 .slick-slide img {
-  width: 100%;
+  // width: 100%;
   transform: scale(0.9);
 }
 
