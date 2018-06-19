@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :entries
 
+
+  scope :dashboard do
+    resources :events
+  end
+
   resources :sessions, only: [:create, :destroy]
 
   root 'home#index'

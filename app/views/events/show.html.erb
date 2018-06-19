@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @event.title %></h1>
+      <p><%= @event.description %></p>
+      <p><%= @event.date %></p>
+      <%= image_tag(@event.image_url(:large3x2), class:"img-responsive") if @event.image? %>
+    </div>
+  </div>
+</div>

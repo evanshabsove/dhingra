@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-sm-12 text-center">
+    <h1>Events</h1>
+    <%= link_to "Create New Event", new_event_path, class: "btn btn-primary btn-space text-center" %>
+    <h3>Edit Events</h3>
+    <% @events.each do |event| %>
+      <br>
+      <%= link_to event.title, edit_event_path(event), class: "btn btn-primary btn-space text-center" %>
+    <% end %>
+  </div>
+</div>
