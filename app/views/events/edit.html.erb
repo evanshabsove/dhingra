@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h1>Edit Event Page</h1>
+      <div class="form-group well">
+        <%= form_for @event do |f| %>
+        <%= f.label :title %>
+          <%= f.text_field :title, :class => "form-control" %>
+          <%= f.label :image %>
+          <%= f.file_field :image %>
+          <%= f.label :description %>
+          <%= f.text_area :description, :class => "form-control" %>
+          <%= f.label :date %>
+          <%= f.date_field :date, :class => "form-control" %>
+          <%= f.submit "Submit", :class => "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
