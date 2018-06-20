@@ -9,6 +9,9 @@ class EventsController < ApplicationController
 
     if @event.save
       redirect_to event_path(@event)
+    else
+      flash[:error] = "Something went wrong Please try again"
+      redirect_to events_path
     end
   end
 
@@ -25,15 +28,25 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event = Event.new(event_params)
+    @event = Event.find(params[:id])
 
     if @event.update_attributes(event_params)
       redirect_to event_path(@event)
+    else
+      flash[:error] = "Something went wrong Please try again"
+      redirect_to events_path
     end
   end
 
   def destroy
-    #code
+    @event = Event.find(params[:id])
+
+    if @event.destroy
+      redirect_to events_path
+    else
+      flash[:error] = "Something went wrong Please try again"
+      redirect_to events_path
+    end
   end
 
   private

@@ -1,0 +1,13 @@
+<div class="container home-events-container">
+  <div class="row">
+    <% @events.each do |event| %>
+      <div class="col-sm-12">
+        <h1><%= event.title %></h1>
+        <p><%= event.description %></p>
+        <p><%= event.date.to_date %></p>
+        <%= image_tag(event.image_url(:large3x2), class:"img-responsive") if event.image? %>
+        <hr class="event-breaker">
+      </div>
+    <% end %>
+  </div>
+</div>

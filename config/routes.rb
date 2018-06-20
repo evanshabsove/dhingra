@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   get '/blog', to: 'home#blog', as: 'blog'
 
+  get '/events', to: 'home#events', as: 'events_homepage'
+
   get '/admin', to: 'sessions#admin', as: 'admin_log_in'
 
   get '/dashboard/information', to: 'dashboard#information', as: 'dashboard_information'
