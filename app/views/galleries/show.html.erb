@@ -15,7 +15,11 @@
 
             for(var i = 0; i < numNodes; i++) {
 
-                figureEl = thumbElements[i]; // <figure> element
+                figureEl = thumbElements[i].firstElementChild; // <figure> element
+
+                if (figureEl == null) {
+                  continue;
+                }
 
                 // include only element nodes
                 if(figureEl.nodeType !== 1) {
@@ -75,7 +79,7 @@
 
             // find index of clicked item by looping through all child nodes
             // alternatively, you may define index via data- attribute
-            var clickedGallery = clickedListItem.parentNode,
+            var clickedGallery = clickedListItem.parentNode.parentNode,
                 childNodes = clickedListItem.parentNode.childNodes,
                 numChildNodes = childNodes.length,
                 nodeIndex = 0,
@@ -207,56 +211,46 @@
     initPhotoSwipeFromDOM('.my-gallery');
   })
 </script>
-
-<section class="center slider">
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-    <% @gallery.paintings.each_with_index do |painting, index| %>
-      <div class="<%= index %> painting-image" value="<%= index %>">
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-          <a href="<%= painting.image_url(:large) %>" itemprop="contentUrl" data-size="1024x1024">
-              <img src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
-          </a>
-        <figcaption itemprop="caption description"><%= painting.description %></figcaption>
-      </figure>
+<div class="container gallery-container">
+  <h2><%= @gallery.title %></h2>
+  <div class="tz-gallery">
+    <div class="row">
+      <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <% @gallery.paintings.each_with_index do |painting, index| %>
+          <div class="col-sm-6 col-md-4">
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a href="<%= painting.image_url(:large) %>" itemprop="contentUrl" data-size="1024x1024">
+                <img class="img-rounded img-responsive" src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
+              </a>
+              <figcaption itemprop="caption description"><%= painting.description %></figcaption>
+            </figure>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</section>
-<h2>First gallery:</h2>
+</div>
 
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-    <% @gallery.paintings.each_with_index do |painting, index| %>
-      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-        <a href="<%= painting.image_url(:large) %>" itemprop="contentUrl" data-size="1024x1024">
-            <img src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
-        </a>
-      <figcaption itemprop="caption description"><%= painting.description %></figcaption>
-    </figure>
-    <% end %>
+<!-- <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
+      <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
+  </a>
+  <figcaption itemprop="caption description">Image caption 2</figcaption>
+</figure>
 
-    <!-- <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2</figcaption>
-    </figure>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
+      <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
+  </a>
+  <figcaption itemprop="caption description">Image caption 3</figcaption>
+</figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 3</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 4</figcaption>
-    </figure> -->
-
-
-  </div>
+<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
+      <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
+  </a>
+  <figcaption itemprop="caption description">Image caption 4</figcaption>
+</figure> -->
 
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
