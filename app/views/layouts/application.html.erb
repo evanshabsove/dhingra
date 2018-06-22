@@ -60,6 +60,9 @@
             <% if current_user && current_user.admin %>
               <li id="dashboard"><%= link_to 'Dashboard', dashboard_index_url %></li>
             <% end %>
+            <% if current_user %>
+              <li id="products"><%= link_to 'Products', products_path %></li>
+            <% end %>
 
             <!-- <li id="blog"><%= link_to 'Blog', blog_path %></li> -->
           </ul>
