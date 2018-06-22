@@ -4,7 +4,7 @@
   <tr>
     <%= form_for painting, method: 'patch', url: "/galleries/#{@gallery.id}/paintings/#{painting.id}" do |f| %>
     <th class="thumbnail">
-      <%= image_tag(painting.image_url, class: "img-thumbnail") if painting.image? %>
+      <%= image_tag(painting.image_url(:thumb), class: "img-thumbnail") if painting.image? %>
     </th>
     <th>
       <%= f.text_field :title, :class => "form-control", value: "#{painting.title}" %>
