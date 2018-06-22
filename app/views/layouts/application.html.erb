@@ -34,6 +34,9 @@
       <div id="main-title" class="col-sm-12 text-center">
         <h1>ALAN DHINGRA</h1>
       </div>
+      <% if current_user %>
+        <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
+      <% end %>
     </div>
     <nav class="navbar navbar-default transparent">
       <div class="container">

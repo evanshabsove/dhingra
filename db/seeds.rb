@@ -11,3 +11,11 @@ Gallery.create(title: 'gallary1', description: 'first gallary')
 User.create(name: 'Evan', email: 'evan@co', password: '123', :admin => true)
 
 
+Product.delete_all
+Product.create! id: 1, name: "Banana", active: true
+Product.create! id: 2, name: "Apple", active: true
+Product.create! id: 3, name: "Carton of Strawberries", active: true
+
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
