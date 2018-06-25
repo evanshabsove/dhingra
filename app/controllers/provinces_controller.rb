@@ -6,6 +6,7 @@ class ProvincesController < ApplicationController
 
   def show
     @province = Province.find(params[:id])
+    @product_groups = @province.product_groups
   end
 
   def new
@@ -47,5 +48,10 @@ class ProvincesController < ApplicationController
       flash[:error] = "Something went wrong Please try again"
       redirect_to province_path(@province)
     end
+  end
+
+  private
+  def province_params
+    params.require(:province).permit(:name)
   end
 end

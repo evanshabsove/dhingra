@@ -1,0 +1,17 @@
+<h1>This is the new product group page</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>New Product Group</h1>
+      <div class="form-group well">
+        <%= form_for [@province, @product_group] do |f| %>
+          <%= f.label :title %>
+          <%= f.text_field :title, :class => "form-control" %>
+          <%= f.label :image %>
+          <%= f.file_field :image, :class => "form-control" %>
+          <%= f.submit "Submit", :class => "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

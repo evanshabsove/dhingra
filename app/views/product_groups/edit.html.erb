@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Edit Product Group: <%= @product_group.title %></h1>
+      <div class="form-group well">
+        <%= form_for [@province, @product_group] do |f| %>
+          <%= f.label :title %>
+          <%= f.text_field :title, :class => "form-control" %>
+          <%= f.label :image %>
+          <%= f.file_field :image, :class => "form-control" %>
+
+          <%= f.fields_for :product do |f| %>
+            <h3>Add Product to Product Group</h3>
+            <%= f.label :name %>
+            <%= f.text_field :name, :class => "form-control" %>
+            <%= f.label :price %>
+            <%= f.number_field :price, step: :any, :class => "form-control" %>
+            <%= f.label :code %>
+            <%= f.text_field :code, :class => "form-control" %>
+            <%= f.label :min %>
+            <%= f.text_field :min, :class => "form-control" %>
+          <% end %>
+          <%= f.submit "Submit", :class => "btn btn-primary" %>
+        <% end %>
+      </div>
+
+      <h1>Current Products</h1>
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Code</th>
+          <th>Minimmum Order</th>
+        </tr>
+        <% @products.each do |product| %>
+          <tr>
+            <th><%= product.name %></th>
+            <th><%= product.price.to_s %></th>
+            <th><%= product.code %></th>
+            <th><%= product.min %></th>
+          </tr>
+        <% end %>
+      </table><br>
+
+    </div>
+  </div>
+</div>

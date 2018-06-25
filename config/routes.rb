@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :provinces do
-    resources :product_groups
-  end
   resources :products
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
@@ -17,6 +14,9 @@ Rails.application.routes.draw do
 
 
   scope :dashboard do
+    resources :provinces do
+      resources :product_groups
+    end
     resources :events
   end
 
