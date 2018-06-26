@@ -7,6 +7,12 @@
           <h1><%= link_to "Click here to add products", edit_province_product_group_path(@province, @product_group) %></h1>
         <% end %>
       <% else %>
+        <% if current_user.admin %>
+          <h1><%= link_to "Click here to add products", edit_province_product_group_path(@province, @product_group) %></h1>
+        <% end %>
+        <% @products.each do |product| %>
+          <%= render "product_row", product: product, order_item: @order_item %>
+        <% end %>
         <h1>We got some products fam</h1>
       <% end %>
     </div>

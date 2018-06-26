@@ -1,9 +1,10 @@
-<h1>I am the provinces index page!</h1>
-<%= link_to "Go here to create a province", new_province_path, :class => "btn btn-primary" %>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <h1>Provinces</h1>
+      <% if current_user.admin %>
+        <%= link_to "Go here to create a province", new_province_path, :class => "btn btn-primary" %>
+      <% end %>
       <% @provinces.each do |province| %>
         <h1><%= link_to province.name, province_path(province) %></h1>
       <% end %>

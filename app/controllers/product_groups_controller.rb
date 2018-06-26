@@ -9,6 +9,7 @@ class ProductGroupsController < ApplicationController
     @province = Province.find(params[:province_id])
     @product_group = ProductGroup.find(params[:id])
     @products = @product_group.products
+    @order_item = current_order.order_items.new
   end
 
   def create
