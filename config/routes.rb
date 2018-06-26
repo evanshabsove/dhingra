@@ -20,7 +20,9 @@ Rails.application.routes.draw do
     resources :events
   end
 
-  resources :sessions, only: [:create, :destroy]
+  # resources :sessions, only: [:create, :destroy]
+
+  devise_for :users
 
   root 'home#index'
 
