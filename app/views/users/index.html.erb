@@ -1,0 +1,15 @@
+<div class="container contact-container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="form-group well">
+        <%= form_for @user, url: create_user_path do |f| %>
+          <%= f.label :email, hidden: true %>
+          <%= f.text_field :email, required: true, placeholder: "Email", class:"form-control half-field" %>
+          <%= f.label :password, hidden: true %>
+          <%= f.password_field :password, placeholder: "Password", class: "form-control half-field" %>
+          <%= f.submit "Submit", :class=>"btn btn-primary"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

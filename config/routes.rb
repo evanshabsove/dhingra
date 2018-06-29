@@ -24,6 +24,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  post 'create_user' => 'users#create', as: :create_user
+
+  resources :users, except: :create
+
   root 'home#index'
 
   get '/about', to: 'home#about', as: 'about'
