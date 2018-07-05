@@ -1,9 +1,9 @@
-<h1>I am the provinces show page!</h1>
-<%= link_to "Go here to create a product group", new_province_product_group_path(@province), :class => "btn btn-primary" %>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <% if current_user.admin %>
+          <%= link_to "Go here to create a product group", new_province_product_group_path(@province), :class => "btn btn-primary" %>
+      <% end %>
       <% @product_groups.each do |product_group| %>
         <h1><%= link_to product_group.title, province_product_group_url(@province, product_group) %></h1>
       <% end %>

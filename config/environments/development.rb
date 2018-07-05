@@ -31,6 +31,9 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => '127.0.0.1', :port => 1025 }
+
   # config.action_mailer.smtp_settings = {
   #   :user_name => ENV["send_gird_user"],
   #   :password => ENV["send_gird_pass"],

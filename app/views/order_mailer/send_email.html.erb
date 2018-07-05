@@ -1,0 +1,12 @@
+<p>
+  Email: <%= @current_user.email %>
+</p>
+<br>
+<p>
+  Has ordered
+</p>
+<ul>
+  <% @order_items.each do |order_item| %>
+    <li><%= "#{order_item.product.name} Quantity: #{order_item.quantity}" %> </li>
+  <% end %>
+</ul>
