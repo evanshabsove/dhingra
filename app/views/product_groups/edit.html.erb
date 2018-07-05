@@ -42,6 +42,7 @@
               <th><%= text_field_tag :min, product.min, :class => "form-control" %></th>
               <th><%= submit_tag "Edit Product", :class => "btn btn-primary" %></th>
             <% end %>
+            <th><%= button_to('Delete Product', product_path(product), :class => 'btn btn-danger', :method => :delete) %></th>
           </tr>
         <% end %>
       </table><br>

@@ -30,7 +30,16 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    #code
+    @product = Product.find(params[:id])
+    @product_group = @product.product_group
+    @province = @product_group.province
+    if @product.destroy
+      flash[:success] = "Successfully deleted product"
+      redirect_to edit_province_product_group_url(@province, @product_group)
+    else
+      flash[:error] = "Something went wrong Please try again"
+      redirect_to edit_province_product_group_url(@province, @product_group)
+    end
   end
 
   private
