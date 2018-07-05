@@ -7,6 +7,6 @@
 </p>
 <ul>
   <% @order_items.each do |order_item| %>
-    <li><%= "#{order_item.product.name} Quantity: #{order_item.quantity}" %> </li>
+    <li><%= "#{order_item.product.name} Quantity: #{order_item.quantity} Code: #{order_item.code}" %> </li>
   <% end %>
 </ul>

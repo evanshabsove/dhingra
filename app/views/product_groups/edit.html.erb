@@ -35,10 +35,13 @@
         </tr>
         <% @products.each do |product| %>
           <tr>
-            <th><%= product.name %></th>
-            <th><%= product.price.to_s %></th>
-            <th><%= product.code %></th>
-            <th><%= product.min %></th>
+            <%= form_tag product_path(product), method: :patch do %>
+              <th><%= text_field_tag :name, product.name, :class => "form-control" %></th>
+              <th><%= number_field_tag :price, product.price, step: :any, :class => "form-control"  %></th>
+              <th><%= text_field_tag :code, product.code, :class => "form-control" %></th>
+              <th><%= text_field_tag :min, product.min, :class => "form-control" %></th>
+              <th><%= submit_tag "Edit Product", :class => "btn btn-primary" %></th>
+            <% end %>
           </tr>
         <% end %>
       </table><br>
