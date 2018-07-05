@@ -16,6 +16,10 @@ class ProductsController < ApplicationController
     #code
   end
 
+  def province_edit
+    #code
+  end
+
   def update
     @product = Product.find(params[:id])
     @product_group = @product.product_group

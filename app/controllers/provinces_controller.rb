@@ -31,8 +31,8 @@ class ProvincesController < ApplicationController
   def update
     @province = Province.find(params[:id])
 
-    if @province.update_attributes(province_params)
-      redirect_to province_path(@province)
+    if @province.update_attributes(edit_province_params)
+      redirect_to provinces_path
     else
       flash[:error] = "Something went wrong Please try again"
       redirect_to province_path
@@ -43,15 +43,23 @@ class ProvincesController < ApplicationController
     @province = Province.find(params[:id])
 
     if @province.destroy
-      redirect_to province_path
+      redirect_to provinces_path
     else
       flash[:error] = "Something went wrong Please try again"
-      redirect_to province_path(@province)
+      redirect_to provinces_path
     end
+  end
+
+  def province_edit
+    @provinces = Province.all
   end
 
   private
   def province_params
     params.require(:province).permit(:name)
+  end
+
+  def edit_province_params
+    params.permit(:name)
   end
 end

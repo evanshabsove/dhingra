@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <p><%= link_to "Go back to previous page", province_path(@province) %></p>
       <% if @products.length == 0  %>
         <h1>This product group has no products</h1>
         <% if current_user.admin %>

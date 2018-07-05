@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
 
   scope :dashboard do
+    get :province_edit, to: 'provinces#province_edit', as: 'province_edit'
     resources :provinces do
       resources :product_groups
     end

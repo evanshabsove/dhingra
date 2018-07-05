@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Province edit page</h1>
+      <table class="table">
+        <tr>
+          <th>Name</th>
+        </tr>
+        <% @provinces.each do |province| %>
+          <tr>
+            <%= form_tag province_path(province), method: :patch do %>
+              <th><%= text_field_tag :name, province.name, :class => "form-control" %></th>
+              <th><%= submit_tag "Edit province", :class => "btn btn-primary" %></th>
+            <% end %>
+            <th><%= button_to('Delete province', province_path(province), :class => 'btn btn-danger', :method => :delete) %></th>
+          </tr>
+        <% end %>
+      </table><br>
+    </div>
+  </div>
+</div>
