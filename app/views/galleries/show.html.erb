@@ -220,7 +220,7 @@
           <div class="col-sm-6 col-md-4">
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
               <a href="<%= painting.image_url(:large) %>" itemprop="contentUrl" data-size="1024x1024">
-                <img class="img-rounded img-responsive" src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
+                <img class="img-responsive" src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
               </a>
               <figcaption itemprop="caption description"><%= painting.description %></figcaption>
             </figure>
