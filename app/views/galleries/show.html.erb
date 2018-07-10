@@ -80,10 +80,12 @@
             // find index of clicked item by looping through all child nodes
             // alternatively, you may define index via data- attribute
             var clickedGallery = clickedListItem.parentNode.parentNode,
-                childNodes = clickedListItem.parentNode.childNodes,
+                childNodes = $(clickedGallery).children(),
                 numChildNodes = childNodes.length,
                 nodeIndex = 0,
                 index;
+
+            clickedListItem = clickedListItem.parentElement
 
             for (var i = 0; i < numChildNodes; i++) {
                 if(childNodes[i].nodeType !== 1) {
