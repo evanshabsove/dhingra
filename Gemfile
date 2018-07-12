@@ -40,6 +40,8 @@ gem 'bcrypt', '~> 3.1.7'
 # devise for users
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'fastimage'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
