@@ -221,7 +221,7 @@
         <% @gallery.paintings.each_with_index do |painting, index| %>
           <div class="col-sm-6 col-md-4">
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-              <% size = FastImage.size("http://www.alandhingra.com#{painting.image_url(:large)}") %>
+              <% size = FastImage.size("#{painting.image_url(:large)}") %>
               <a href="<%= painting.image_url(:large) %>" itemprop="contentUrl" data-size="<%= size[0].to_s + 'x' + size[1].to_s %>">
                 <img class="img-responsive" src="<%= painting.image_url(:thumb) %>" itemprop="thumbnail" alt="Image description" />
               </a>
