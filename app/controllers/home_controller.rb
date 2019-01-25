@@ -25,4 +25,8 @@ class HomeController < ApplicationController
     @featured_galleries = Gallery.first(3)
     @entry = Entry.where(category: "homepage").first
   end
+
+  def catalogue
+    #code
+  end
 end

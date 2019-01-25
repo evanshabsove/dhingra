@@ -10,4 +10,12 @@ $(function(){
     })
   })
 
+  $("#code").keyup(function(){
+    var value = $(this).val().toLowerCase();
+    if (value == 'alan') {
+      $('#download-wholesale').removeClass('disabled')
+    }
+    console.log("change");
+  })
+
 })

@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
+  get '/catalogue', to: 'home#catalogue', as: 'catalogue'
+
   get '/about', to: 'home#about', as: 'about'
 
   get '/contact', to: 'home#contact', as: 'contact'
