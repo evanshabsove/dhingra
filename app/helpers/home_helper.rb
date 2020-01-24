@@ -16,7 +16,7 @@ module HomeHelper
      'Southwestern Ontario',
      'Eastern Ontario',
      'Prince Edward Island',
-     'Provincial Pakrs',
+     'Provincial Parks',
      'Quebec',
      'Saskatchewan',
      'Yukon Territory']
@@ -112,7 +112,7 @@ module HomeHelper
       'Thunder Bay',
       'Timmins',
       'Killarney',
-      'Manatoulin Island',
+      'Manitoulin Island',
       'Parry Sound'
     ]
   end
@@ -166,6 +166,16 @@ module HomeHelper
   def prince_edward_island
     [
       'Charlottetown'
+    ]
+  end
+
+  def provincial_parks
+    [
+      'Gatineau',
+      'Killarney',
+      'KillbearBonEcho',
+      'MontrealMontTrembant',
+      'QuebecCity,Laurentides'
     ]
   end
 
