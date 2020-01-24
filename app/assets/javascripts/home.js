@@ -14,8 +14,8 @@ $(function(){
     var value = $(this).val().toLowerCase();
     if (value == 'alan') {
       $('#download-wholesale').removeClass('disabled')
+      $('#download-specific-catalogue').removeClass('disabled')
     }
-    console.log("change");
   })
 
 })

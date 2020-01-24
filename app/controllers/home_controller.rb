@@ -29,4 +29,9 @@ class HomeController < ApplicationController
   def catalogue
     #code
   end
+
+  def wholesale_catalogue
+    #code
+  end
+
 end

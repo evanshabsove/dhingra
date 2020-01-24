@@ -1,13 +1,10 @@
 <div class="container home-events-container">
   <div class="row">
     <div class="col-sm-12 text-center">
-      <h3>Click here to download the catalogue</h3>
+      <h4>Click here to download the public catalogue</h4>
       <p><%= link_to 'Download Public Catalogue', '/documents/public.pdf', class: 'btn btn-primary', id: "download-public" %></p>
-      <br>
-      <h3>Please enter code to download the wholesale catalogue</h3>
-      <%= text_field_tag 'code' %>
-      <br>
-      <p><%= link_to 'Download Wholesale Catalogue', '/documents/wholesale.pdf', class: 'btn btn-primary disabled', id: "download-wholesale" %></p>
+      <h4 style='margin-top: 5vh;'>Looking for wholesale?</h4>
+      <p><%= link_to 'View Wholesale Catalogues', wholesale_catalogue_path, class: 'btn btn-primary' %></p>
     </div>
   </div>
 </div>

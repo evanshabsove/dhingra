@@ -1,0 +1,71 @@
+<% array = [] %>
+<% Dir.entries("public/documents/catalogues")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+  <% array << file_name %>
+<% end %>
+<div id='catalogue-array' class="hidden" data-array="<%= array %>">
+</div>
+<div class="container home-events-container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h4>Select Province</h4>
+      <%= select_tag "province", options_for_select(canadian_provinces, 'Alberta'), class: 'form form-control' %>
+      <h4>Select a region</h4>
+      <div id='alberta'>
+        <%= select_tag "region", options_for_select(alberta, 'Banff'), class: 'form form-control' %>
+      </div>
+      <div id='british_columbia'>
+        <%= select_tag "region", options_for_select(british_columbia, 'Big White Ski Resort'), class: 'form form-control' %>
+      </div>
+      <div id='manitoba'>
+        <%= select_tag "region", options_for_select(manitoba, 'Victoria Beach'), class: 'form form-control' %>
+      </div>
+      <div id="national_parks">
+        <%= select_tag "region", options_for_select(national_parks, 'Bay of Fundy'), class: 'form form-control' %>
+      </div>
+      <div id='new_brunswick'>
+        <%= select_tag "region", options_for_select(new_brunswick, 'Bay of Fundy'), class: 'form form-control' %>
+      </div>
+      <div id='new_designs'>
+        <%= select_tag "region", options_for_select(new_designs, 'New Deisgns'), class: 'form form-control' %>
+      </div>
+      <div id='newfoundland_and_labrador'>
+        <%= select_tag "region", options_for_select(newfoundland_and_labrador, "St John's"), class: 'form form-control' %>
+      </div>
+      <div id='northwest_territories'>
+        <%= select_tag "region", options_for_select(northwest_territories, 'Yellowknife'), class: 'form form-control' %>
+      </div>
+      <div id='nova_scotia'>
+        <%= select_tag "region", options_for_select(nova_scotia, 'Cape Breton'), class: 'form form-control' %>
+      </div>
+      <div id='northern_ontario'>
+        <%= select_tag "region", options_for_select(northern_ontario, 'French River'), class: 'form form-control' %>
+      </div>
+      <div id='central_ontario'>
+        <%= select_tag "region", options_for_select(central_ontario, 'Algonquin Provincial Park'), class: 'form form-control' %>
+      </div>
+      <div id='southwestern_ontario'>
+        <%= select_tag "region", options_for_select(southwestern_ontario, 'Bayfield'), class: 'form form-control' %>
+      </div>
+      <div id='eastern_ontario'>
+        <%= select_tag "region", options_for_select(eastern_ontario, '1000 Islands'), class: 'form form-control' %>
+      </div>
+      <div id='prince_edward_island'>
+        <%= select_tag "region", options_for_select(prince_edward_island, 'Charlottetown'), class: 'form form-control' %>
+      </div>
+      <div id='quebec'>
+        <%= select_tag "region", options_for_select(quebec, 'Gatineau'), class: 'form form-control' %>
+      </div>
+      <div id='saskatchewan'>
+        <%= select_tag "region", options_for_select(saskatchewan, 'Prince Albert'), class: 'form form-control' %>
+      </div>
+      <div id='yukon_territory'>
+        <%= select_tag "region", options_for_select(yukon_territory, 'Whitehorse'), class: 'form form-control' %>
+      </div>
+
+      <h4>Please enter code to download the wholesale catalogue</h4>
+      <%= text_field_tag 'code' %>
+
+      <p style='margin-top: 10px;'><%= link_to 'Download Wholesale Catalogue', '/documents/wholesale.pdf', class: 'btn btn-primary disabled', id: "download-specific-catalogue" %></p>
+    </div>
+  </div>
+</div>
