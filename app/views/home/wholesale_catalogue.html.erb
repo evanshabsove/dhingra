@@ -1,9 +1,9 @@
-<% array = [] %>
-<% Dir.entries("public/documents/catalogues")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
-  <% array << file_name %>
-<% end %>
-<div id='catalogue-array' class="hidden" data-array="<%= array %>">
-</div>
+<%# array = [] %>
+<%# Dir.entries("public/documents/catalogues")[2..-1].each do |file_name| #[2..-1] as the first two will be ".", ".." %>
+  <%# array << file_name %>
+<%# end %>
+<!-- <div id='catalogue-array' class="hidden" data-array="<%# array %>"> -->
+<!-- </div> -->
 <div class="container home-events-container">
   <div class="row">
     <div class="col-sm-12 text-center">
