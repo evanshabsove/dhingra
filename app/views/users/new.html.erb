@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-12 text-center">
       <div class="form-group well">
-        <%= form_for @user, url: create_user_path do |f| %>
+        <%= form_for @user, url: '/users' do |f| %>
           <%= f.label :email, hidden: true %>
           <%= f.text_field :email, required: true, placeholder: "Email", class:"form-control half-field" %>
           <%= f.label :password, hidden: true %>

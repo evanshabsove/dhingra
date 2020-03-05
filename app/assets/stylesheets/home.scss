@@ -5,14 +5,14 @@
 .home-page {
   height: 75vh;
   // not sure why this works lol
-  width: 1%;
   background: url(image-path('fullsize-6.JPG')) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  display: table-cell;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .opening-title {
@@ -43,10 +43,6 @@
 
 div.home-container {
   padding: 0;
-}
-
-body, html {
-  width: 100%;
 }
 
 .home-column {
@@ -101,5 +97,20 @@ body, html {
   .col-sm-12 {
     text-align: center;
     margin-bottom: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-column {
+    h1 {
+      font-size: 4em;
+    }
+    a {
+      font-size: 2em;
+    }
+  }
+
+  .about-text-col {
+    margin: 20px;
   }
 }

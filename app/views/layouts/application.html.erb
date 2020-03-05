@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://kenwheeler.github.io/slick/slick/slick-theme.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <div id="main-title" class="col-sm-12 text-center">
         <h1>ALAN DHINGRA</h1>
       </div>
-      <% if current_user %>
+      <% if @current_user %>
         <h1 class="cart-text"><%= render 'layouts/cart_text' %></h1>
       <% end %>
     </div>
@@ -58,11 +59,13 @@
             <li id="event"><%= link_to 'Events', events_homepage_path %></li>
             <li id="contact"><%= link_to 'Contact', new_contact_path %></li>
             <li id="download-catalogue"><%= link_to 'Catalogue', catalogue_path %></li>
-            <% if current_user && current_user.admin %>
+            <% if @current_user && @current_user.admin %>
               <li id="dashboard"><%= link_to 'Dashboard', dashboard_index_url %></li>
             <% end %>
-            <% if current_user %>
+            <% if @current_user %>
               <li id="products"><%= link_to 'Products', provinces_path %></li>
+            <% else %>
+              <li id="sign-in"><%= link_to 'Sign In', new_user_session_path %></li>
             <% end %>
 
             <!-- <li id="blog"><%= link_to 'Blog', blog_path %></li> -->
@@ -71,8 +74,12 @@
       </div><!-- /.container-fluid -->
     </nav>
   </div>
-    <!-- <p class="notice"><%# notice %></p>
-    <p class="alert"><%# alert %></p> -->
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
     <footer class="footer text-center">
       <div class="container-fluid">

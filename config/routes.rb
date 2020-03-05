@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+
   resources :products
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
@@ -22,15 +24,9 @@ Rails.application.routes.draw do
     resources :events
   end
 
-  # resources :sessions, only: [:create, :destroy]
+  root to: "home#index"
 
-  devise_for :users
-
-  post 'create_user' => 'users#create', as: :create_user
-
-  resources :users, except: :create
-
-  root 'home#index'
+  resources :users, only: [:new, :create]
 
   get '/catalogue', to: 'home#catalogue', as: 'catalogue'
 
@@ -43,8 +39,6 @@ Rails.application.routes.draw do
   get '/blog', to: 'home#blog', as: 'blog'
 
   get '/events', to: 'home#events', as: 'events_homepage'
-
-  get '/admin', to: 'sessions#admin', as: 'admin_log_in'
 
   get '/dashboard/information', to: 'dashboard#information', as: 'dashboard_information'
 

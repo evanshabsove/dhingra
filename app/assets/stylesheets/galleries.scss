@@ -169,3 +169,11 @@ button.slick-next, button.slick-prev {
     padding: 20px 0px;
   }
 }
+
+@media (max-width: 768px) {
+  .gallery-container {
+    .col-md-4 {
+      height: inherit;
+    }
+  }
+}

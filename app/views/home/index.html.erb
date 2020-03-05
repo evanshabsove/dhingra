@@ -27,11 +27,13 @@
       <% @featured_galleries.each do |gallery| %>
        <%= link_to gallery_url(gallery.id) do  %>
         <div class="col-sm-4 gallery-index-item">
-          <%= image_tag(gallery.paintings.first.image_url(:thumb), :class => "img-responsive image-gallery") %>
-          <div class="hover-content">
-            <h1 class="hover-title"><%= gallery.title %></h1>
-            <!-- <span class="hover-description"><%= gallery.description %></span> -->
-          </div>
+          <% if !gallery.paintings.empty? %>
+            <%= image_tag(gallery.paintings.first.image_url(:thumb), :class => "img-responsive image-gallery") %>
+            <div class="hover-content">
+              <h1 class="hover-title"><%= gallery.title %></h1>
+              <!-- <span class="hover-description"><%= gallery.description %></span> -->
+            </div>
+          <% end %>
         </div>
         <% end %>
       <% end %>
