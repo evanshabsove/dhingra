@@ -39,7 +39,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # devise for users
 gem 'devise'
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 gem 'fastimage'
 # Use Capistrano for deployment
