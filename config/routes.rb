@@ -30,8 +30,6 @@ Rails.application.routes.draw do
 
   get '/catalogue', to: 'home#catalogue', as: 'catalogue'
 
-  get '/wholesale_catalogue', to: 'home#wholesale_catalogue', as: 'wholesale_catalogue'
-
   get '/about', to: 'home#about', as: 'about'
 
   get '/contact', to: 'home#contact', as: 'contact'

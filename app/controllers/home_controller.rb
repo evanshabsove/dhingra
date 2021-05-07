@@ -27,11 +27,7 @@ class HomeController < ApplicationController
   end
 
   def catalogue
-    #code
-  end
-
-  def wholesale_catalogue
-    #code
+    redirect_to '/'
   end
 
 end
