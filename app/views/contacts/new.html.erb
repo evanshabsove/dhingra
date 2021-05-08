@@ -1,3 +1,8 @@
+<%= content_for :recaptcha_js do %>
+  <%= include_recaptcha_js %>
+<% end %>
+
+
 <div class="container contact-container">
   <div class="row">
     <div class="col-sm-12 contact-text-col">
@@ -25,8 +30,8 @@
           <%= f.label :message, hidden: true %><br>
           <%= f.text_area :message, as: :text, :class => "form-control contact-text-area-field", placeholder: "Message" %>
         </div>
-          <%= recaptcha_tags %>
           <%= f.submit "Submit", :class=>"btn btn-primary"%>
+          <%= recaptcha_execute('contact') %>
         <% end %>
       </div>
     </div>
