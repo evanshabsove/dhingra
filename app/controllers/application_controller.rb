@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :current_order
 
+  RECAPTCHA_MINIMUM_SCORE = 0.5
+
   private
 
   def current_order
