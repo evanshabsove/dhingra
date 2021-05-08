@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_recaptcha?(token, recaptcha_action)
-    secret_key = Rails.application.credentials.dig(:recaptcha_secret_key)
+    secret_key = ENV['re_captcha_private_key']
 
     uri = URI.parse("https://www.google.com/recaptcha/api/siteverify?secret=#{secret_key}&response=#{token}")
     response = Net::HTTP.get_response(uri)
