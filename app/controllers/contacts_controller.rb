@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(update_params)
 
-    unless verify_recaptcha?(params[:recaptcha_token], 'contact')
+    unless verify_recaptcha(params[:recaptcha_token], 'contact')
       flash.now[:error] = t('recaptcha.errors.verification_failed')
       return render :new
     end
