@@ -7,7 +7,13 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(update_params)
-    if verify_recaptcha(model: @contact) && @contact.save
+
+    unless verify_recaptcha?(params[:recaptcha_token], 'contact')
+      flash.now[:error] = t('recaptcha.errors.verification_failed')
+      return render :new
+    end
+
+    if @contact.save
       ContactMeMailer.send_email(@contact).deliver
       redirect_to root_url
       flash[:notice] = "Email succesfully sent!"
