@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(update_params)
-    if @contact.save
+    if verify_recaptcha(model: @contact) && @contact.save
       ContactMeMailer.send_email(@contact).deliver
       redirect_to root_url
       flash[:notice] = "Email succesfully sent!"

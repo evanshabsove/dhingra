@@ -25,6 +25,7 @@
           <%= f.label :message, hidden: true %><br>
           <%= f.text_area :message, as: :text, :class => "form-control contact-text-area-field", placeholder: "Message" %>
         </div>
+          <%= recaptcha_tags %>
           <%= f.submit "Submit", :class=>"btn btn-primary"%>
         <% end %>
       </div>
