@@ -1,0 +1,84 @@
+.home-page {
+  height: 75vh;
+  background: url(/assets/fullsize-6-a591c69c6e37e286a646c9a434f0547f18f5cd5ba5c8c6412b7b0d110e89685e.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.opening-title {
+  font-family: "Lato";
+  display: none;
+  margin-bottom: 12vh;
+  text-shadow: 3px 1px 5px rgba(0, 0, 0, 0.47); }
+
+.home-page-link {
+  display: none;
+  font-family: "Lato";
+  font-weight: 300;
+  /* color: gray; */
+  /* color: white !important; */
+  border: 3px solid white;
+  padding: 5px;
+  text-decoration: none !important;
+  border-radius: 2px;
+  background-color: rgba(80, 80, 80, 0.16);
+  transition: background-color 0.2s ease; }
+
+.home-page-link:hover {
+  background-color: rgba(80, 80, 80, 0.8);
+  color: white; }
+
+div.home-container {
+  padding: 0; }
+
+.home-column {
+  text-align: center;
+  height: 378px; }
+  .home-column h1 {
+    font-size: 8em;
+    color: white;
+    text-transform: uppercase; }
+  .home-column a {
+    font-size: 3em;
+    color: white; }
+
+.first-photo {
+  margin-left: 50px; }
+
+.quick-about {
+  padding-top: 10vh; }
+
+.about-text-col {
+  margin-left: 15px;
+  background-color: #d3d3d3;
+  padding: 20px; }
+  .about-text-col h1 {
+    margin-bottom: 25px; }
+  .about-text-col p {
+    margin-bottom: 20px;
+    line-height: 25px; }
+
+.about-image-col {
+  padding: 15px;
+  background-color: #d3d3d3;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.three-galleries {
+  margin-top: 10vh;
+  margin-bottom: 10vh; }
+  .three-galleries .col-sm-12 {
+    text-align: center;
+    margin-bottom: 5vh; }
+
+@media (max-width: 768px) {
+  .home-column h1 {
+    font-size: 4em; }
+  .home-column a {
+    font-size: 2em; }
+  .about-text-col {
+    margin: 20px; } }

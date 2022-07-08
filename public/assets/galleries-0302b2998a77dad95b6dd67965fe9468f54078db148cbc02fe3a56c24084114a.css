@@ -1,0 +1,143 @@
+.gallery-index-container {
+  padding-top: 10vh; }
+
+.hover-title:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white; }
+
+.hover-content {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .hover-content .hover-title {
+    font-size: 30px;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    vertical-align: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center; }
+
+.center.slider {
+  margin-top: 0px;
+  padding-top: 14vh;
+  width: 85%; }
+
+.image-gallery:hover {
+  cursor: pointer; }
+  .image-gallery:hover .hover-content {
+    font-size: 50px; }
+
+.gallery-painting {
+  max-height: 50vh !important;
+  width: auto;
+  cursor: pointer;
+  margin: auto; }
+
+.painting-image {
+  text-align: center;
+  max-height: 50vh !important;
+  width: auto; }
+
+.slick-track {
+  max-height: 50vh !important; }
+
+.gallery-painting-div {
+  opacity: 0; }
+
+h1.painting-title {
+  margin: 0; }
+
+.gallery-paintings-container {
+  padding-top: 77px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-decoration: none; }
+
+.painting-title-div {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  margin-top: -52px;
+  margin-bottom: 10px;
+  padding-bottom: 3px;
+  background: linear-gradient(rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.46));
+  padding-left: 5px;
+  color: white;
+  line-height: 0;
+  display: none;
+  pointer-events: none;
+  text-decoration: none; }
+
+.gallery-index-item {
+  opacity: 0;
+  position: relative !important;
+  padding: 0 !important;
+  margin: 1.665% !important; }
+  .gallery-index-item .image-gallery {
+    width: 100%; }
+
+@media (min-width: 768px) {
+  .col-sm-4 {
+    width: 30% !important; } }
+
+.painting-link {
+  text-decoration: none !important; }
+
+.slider {
+  width: 50%;
+  margin: 100px auto; }
+
+.slick-slide {
+  margin: 10px 20px; }
+
+.slick-slide img {
+  transform: scale(0.9); }
+
+.slick-prev:before,
+.slick-next:before {
+  color: black; }
+
+.slick-dotted .slick-current img {
+  transform: scale(1.1); }
+
+.slick-prev:before, .slick-next:before {
+  color: red !important; }
+
+button.slick-next, button.slick-prev {
+  margin-top: 50px; }
+
+.gallery-text {
+  display: none;
+  text-align: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh; }
+
+.contact-text {
+  margin-bottom: 5vh; }
+  .contact-text h4 {
+    display: inline;
+    margin-right: 15px; }
+
+.gallery-container h2 {
+  text-align: center;
+  padding: 10px 0px; }
+
+.gallery-container .col-md-4 {
+  height: 420px; }
+
+.gallery-container figcaption {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 0px; }
+
+@media (max-width: 768px) {
+  .gallery-container .col-md-4 {
+    height: inherit; } }

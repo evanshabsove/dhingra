@@ -1,0 +1,55 @@
+.painting-show-container {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 66px; }
+
+.painting-show-picture-container {
+  padding-top: 4vh;
+  margin-left: 3vw;
+  display: inline-block; }
+
+.painting-show-picture {
+  max-width: 60vw;
+  max-height: 60vh; }
+
+.painting-show-title-container {
+  margin-left: 2vw;
+  width: 32vw;
+  margin-right: 2.5vw;
+  left: 0;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 4vh; }
+
+.painting-show-title {
+  margin: 0; }
+
+.painting-show-description {
+  float: right;
+  width: 32vw;
+  margin-top: 3vh; }
+
+.painting-show-interested {
+  display: inline-block; }
+
+.contact-me-span {
+  color: #00a0b3;
+  text-decoration: underline;
+  cursor: pointer; }
+
+@media (max-width: 767px) {
+  .painting-show-picture-container {
+    padding-top: 4vh;
+    display: block;
+    margin-left: 0px;
+    text-align: center; }
+  .painting-show-picture {
+    max-width: 90vw;
+    max-height: 90vh; }
+  .painting-show-title-container {
+    margin-left: 5vw;
+    width: 90vw;
+    padding-top: 4vh; }
+  .painting-show-description {
+    width: 90vw;
+    margin-top: 3vh; } }

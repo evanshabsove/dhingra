@@ -1,0 +1,32 @@
+.admin-container {
+  padding-top: 77px; }
+
+.admin-email {
+  width: 300px; }
+
+.dashboard-container {
+  padding-top: 77px; }
+
+.btn-space {
+  margin: 3px; }
+
+.new-gallery-container {
+  padding-top: 77px; }
+
+.edit-gallery-container {
+  padding-top: 77px; }
+
+.col-centered {
+  float: none;
+  margin: 0 auto; }
+
+.paintings-container {
+  padding-top: 77px; }
+
+.thumbnail {
+  max-width: 400px; }
+
+.edit-information-container {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw; }

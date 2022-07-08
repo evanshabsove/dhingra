@@ -1,0 +1,15 @@
+.footer {
+  height: 30vh;
+  background: black;
+  color: #d3d3d3; }
+
+.footer-text {
+  margin-top: 4vh; }
+  .footer-text .call {
+    margin-top: 20px; }
+  .footer-text .location {
+    margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .footer {
+    height: inherit; } }
