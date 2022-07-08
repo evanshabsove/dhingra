@@ -167,7 +167,6 @@ GEM
     pg (1.2.2)
     pg (1.2.2-x64-mingw32)
     pg (1.2.2-x86-mingw32)
-    photoswipe-rails (4.1.2)
     puma (3.12.4)
     puma (3.12.4-java)
     racc (1.6.0)
@@ -291,7 +290,6 @@ DEPENDENCIES
   mail_form
   mini_magick
   pg
-  photoswipe-rails
   puma (~> 3.0)
   rails (~> 6.0)
   recaptcha
